@@ -138,3 +138,29 @@ An example of using MinstrelWifiManager is given in scratch/rca, where one mobil
 
 ### Further reading
 For more information on the implementation of the IEEE 802.11ah module for ns-3, check our [recent WNS3 paper on ResearchGate](https://www.researchgate.net/publication/324910418_Extension_of_the_IEEE_80211ah_ns-3_Simulation_Module).
+
+
+### AOMDV routing protocol
+The default layout is like this, on a 2-D grid.
+```
+n20  n21  n22  n23  n24
+n15  n16  n17  n18  n19
+n10  n11  n12  n13  n14
+n5   n6   n7   n8   n9
+n0   n1   n2   n3   n4
+```
+The layout is affected by the parameters given to GridPositionAllocator; by default, GridWidth is 5 and numNodes is 25.
+
+Flow 1: node 1 -> node 14 (10.1.1.2 -> 10.1.1.15) 
+
+The output is as below
+```
+---------------------------Flow 1 statistic result---------------------------
+Src Addr 10.1.1.2 Dest Addr 10.1.1.15
+Tx packets : 6
+Rx packets : 6
+Avg_PDR : 1
+Avg_SystemThroughput : 2.39674 [Kbps]
+Avg_e2eDelay : 0.00670584 [Sec]
+Packet loss ratio : 0 % 
+```
