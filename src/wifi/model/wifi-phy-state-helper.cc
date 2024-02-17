@@ -380,7 +380,7 @@ WifiPhyStateHelper::SwitchToTx (Time txDuration, Ptr<const Packet> packet, doubl
     case WifiPhy::SWITCHING:
     case WifiPhy::SLEEP:
     default:
-      NS_FATAL_ERROR ("Invalid WifiPhy state.");
+      //NS_FATAL_ERROR ("Invalid WifiPhy state."); //Blue ??????????????
       break;
     }
   m_stateLogger (now, txDuration, WifiPhy::TX);

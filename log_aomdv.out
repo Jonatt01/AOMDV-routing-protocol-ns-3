@@ -1,0 +1,560 @@
+Waf: Entering directory `/home/jonathan/IEEE802.11ah-ECA-DBTMA/build'
+[1288/1807] Compiling src/aomdv/model/aomdv-routing-protocol.cc
+[1305/1807] Compiling src/aomdv/model/aomdv-rtable.cc
+[1775/1807] Linking build/libns3-dev-aomdv-debug.so
+[1787/1807] Linking build/scratch/aodv_test
+[1788/1807] Linking build/scratch/test/test
+[1789/1807] Linking build/scratch/rca/rca
+[1790/1807] Linking build/scratch/scratch-simulator
+[1791/1807] Linking build/scratch/third
+[1792/1807] Linking build/scratch/density_blue
+[1793/1807] Linking build/scratch/labtest
+[1794/1807] Linking build/scratch/RAW-generate
+[1795/1807] Linking build/utils/ns3-dev-print-introspected-doxygen-debug
+[1796/1807] Linking build/utils/ns3-dev-test-runner-debug
+Waf: Leaving directory `/home/jonathan/IEEE802.11ah-ECA-DBTMA/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (8.986s)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f5519e4b30)
+0s -1 AomdvRoutingTable:Purge(0x55f5519e4b30)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f5519ec160)
+0s -1 AomdvRoutingTable:Purge(0x55f5519ec160)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b42500)
+0s -1 AomdvRoutingTable:Purge(0x55f551b42500)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b43740)
+0s -1 AomdvRoutingTable:Purge(0x55f551b43740)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b456d0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b456d0)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b47c70)
+0s -1 AomdvRoutingTable:Purge(0x55f551b47c70)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b4a210)
+0s -1 AomdvRoutingTable:Purge(0x55f551b4a210)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b4c7b0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b4c7b0)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b4ef40)
+0s -1 AomdvRoutingTable:Purge(0x55f551b4ef40)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b516d0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b516d0)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b53e60)
+0s -1 AomdvRoutingTable:Purge(0x55f551b53e60)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b565f0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b565f0)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b58d80)
+0s -1 AomdvRoutingTable:Purge(0x55f551b58d80)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b5b510)
+0s -1 AomdvRoutingTable:Purge(0x55f551b5b510)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b5dca0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b5dca0)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b60430)
+0s -1 AomdvRoutingTable:Purge(0x55f551b60430)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b62bc0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b62bc0)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b65350)
+0s -1 AomdvRoutingTable:Purge(0x55f551b65350)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b67ae0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b67ae0)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b6a270)
+0s -1 AomdvRoutingTable:Purge(0x55f551b6a270)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b6ca00)
+0s -1 AomdvRoutingTable:Purge(0x55f551b6ca00)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b6f190)
+0s -1 AomdvRoutingTable:Purge(0x55f551b6f190)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b71920)
+0s -1 AomdvRoutingTable:Purge(0x55f551b71920)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b740b0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b740b0)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 127.0.0.1
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b76840)
+0s -1 AomdvRoutingTable:Purge(0x55f551b76840)
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3caf0)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 127.0.0.1
+0s -1 [node 0] AomdvRoutingProtocol:NotifyAddAddress(0x55f5519e4a20,  interface , 1,  address , m_local=10.1.1.1; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 0] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f5519e4a20, 10.1.1.1)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f5519e4b30)
+0s -1 AomdvRoutingTable:Purge(0x55f5519e4b30)
+0s -1 [node 0] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 1] AomdvRoutingProtocol:NotifyAddAddress(0x55f5519ec050,  interface , 1,  address , m_local=10.1.1.2; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 1] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f5519ec050, 10.1.1.2)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f5519ec160)
+0s -1 AomdvRoutingTable:Purge(0x55f5519ec160)
+0s -1 [node 1] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 2] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b423f0,  interface , 1,  address , m_local=10.1.1.3; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 2] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b423f0, 10.1.1.3)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b42500)
+0s -1 AomdvRoutingTable:Purge(0x55f551b42500)
+0s -1 [node 2] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 3] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b43630,  interface , 1,  address , m_local=10.1.1.4; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 3] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b43630, 10.1.1.4)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b43740)
+0s -1 AomdvRoutingTable:Purge(0x55f551b43740)
+0s -1 [node 3] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 4] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b455c0,  interface , 1,  address , m_local=10.1.1.5; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 4] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b455c0, 10.1.1.5)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b456d0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b456d0)
+0s -1 [node 4] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 5] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b47b60,  interface , 1,  address , m_local=10.1.1.6; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 5] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b47b60, 10.1.1.6)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b47c70)
+0s -1 AomdvRoutingTable:Purge(0x55f551b47c70)
+0s -1 [node 5] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 6] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b4a100,  interface , 1,  address , m_local=10.1.1.7; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 6] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b4a100, 10.1.1.7)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b4a210)
+0s -1 AomdvRoutingTable:Purge(0x55f551b4a210)
+0s -1 [node 6] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 7] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b4c6a0,  interface , 1,  address , m_local=10.1.1.8; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 7] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b4c6a0, 10.1.1.8)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b4c7b0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b4c7b0)
+0s -1 [node 7] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 8] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b4ee30,  interface , 1,  address , m_local=10.1.1.9; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 8] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b4ee30, 10.1.1.9)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b4ef40)
+0s -1 AomdvRoutingTable:Purge(0x55f551b4ef40)
+0s -1 [node 8] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 9] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b515c0,  interface , 1,  address , m_local=10.1.1.10; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 9] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b515c0, 10.1.1.10)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b516d0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b516d0)
+0s -1 [node 9] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 10] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b53d50,  interface , 1,  address , m_local=10.1.1.11; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 10] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b53d50, 10.1.1.11)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b53e60)
+0s -1 AomdvRoutingTable:Purge(0x55f551b53e60)
+0s -1 [node 10] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 11] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b564e0,  interface , 1,  address , m_local=10.1.1.12; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 11] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b564e0, 10.1.1.12)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b565f0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b565f0)
+0s -1 [node 11] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 12] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b58c70,  interface , 1,  address , m_local=10.1.1.13; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 12] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b58c70, 10.1.1.13)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b58d80)
+0s -1 AomdvRoutingTable:Purge(0x55f551b58d80)
+0s -1 [node 12] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 13] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b5b400,  interface , 1,  address , m_local=10.1.1.14; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 13] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b5b400, 10.1.1.14)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b5b510)
+0s -1 AomdvRoutingTable:Purge(0x55f551b5b510)
+0s -1 [node 13] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 14] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b5db90,  interface , 1,  address , m_local=10.1.1.15; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 14] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b5db90, 10.1.1.15)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b5dca0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b5dca0)
+0s -1 [node 14] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 15] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b60320,  interface , 1,  address , m_local=10.1.1.16; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 15] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b60320, 10.1.1.16)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b60430)
+0s -1 AomdvRoutingTable:Purge(0x55f551b60430)
+0s -1 [node 15] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 16] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b62ab0,  interface , 1,  address , m_local=10.1.1.17; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 16] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b62ab0, 10.1.1.17)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b62bc0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b62bc0)
+0s -1 [node 16] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 17] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b65240,  interface , 1,  address , m_local=10.1.1.18; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 17] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b65240, 10.1.1.18)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b65350)
+0s -1 AomdvRoutingTable:Purge(0x55f551b65350)
+0s -1 [node 17] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 18] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b679d0,  interface , 1,  address , m_local=10.1.1.19; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 18] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b679d0, 10.1.1.19)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b67ae0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b67ae0)
+0s -1 [node 18] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 19] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b6a160,  interface , 1,  address , m_local=10.1.1.20; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 19] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b6a160, 10.1.1.20)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b6a270)
+0s -1 AomdvRoutingTable:Purge(0x55f551b6a270)
+0s -1 [node 19] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 20] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b6c8f0,  interface , 1,  address , m_local=10.1.1.21; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 20] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b6c8f0, 10.1.1.21)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b6ca00)
+0s -1 AomdvRoutingTable:Purge(0x55f551b6ca00)
+0s -1 [node 20] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 21] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b6f080,  interface , 1,  address , m_local=10.1.1.22; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 21] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b6f080, 10.1.1.22)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b6f190)
+0s -1 AomdvRoutingTable:Purge(0x55f551b6f190)
+0s -1 [node 21] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 22] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b71810,  interface , 1,  address , m_local=10.1.1.23; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 22] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b71810, 10.1.1.23)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b71920)
+0s -1 AomdvRoutingTable:Purge(0x55f551b71920)
+0s -1 [node 22] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 23] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b73fa0,  interface , 1,  address , m_local=10.1.1.24; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 23] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b73fa0, 10.1.1.24)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b740b0)
+0s -1 AomdvRoutingTable:Purge(0x55f551b740b0)
+0s -1 [node 23] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0s -1 [node 24] AomdvRoutingProtocol:NotifyAddAddress(0x55f551b76730,  interface , 1,  address , m_local=10.1.1.25; m_mask=255.255.255.0; m_broadcast=10.1.1.255; m_scope=2; m_secondary=0)
+0s -1 [node 24] AomdvRoutingProtocol:NotifyInterfaceUp(0x55f551b76730, 10.1.1.25)
+0s -1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.255
+0s -1 AomdvRoutingTable:PathInsert(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.255
+0s -1 AomdvRoutingTable:AddRoute(0x55f551b76840)
+0s -1 AomdvRoutingTable:Purge(0x55f551b76840)
+0s -1 [node 24] AomdvRoutingProtocol:NotifyInterfaceUp(): after insert
+0s -1 AomdvRoutingTable:PrintPaths(0x7fff9ce3ca50)
+0s -1 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0s -1 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+Position have been saved to: ../Python-Tools/node_position.csv
+sinkAddress : 10.1.1.15
+0s 0 [node 0] AomdvRoutingProtocol:DoInitialize(0x55f5519e4a20)
+0s 0 [node 0] AomdvRoutingProtocol:DoInitialize(): Starting at time 99ms
+0s 1 [node 1] AomdvRoutingProtocol:DoInitialize(0x55f5519ec050)
+0s 1 [node 1] AomdvRoutingProtocol:DoInitialize(): Starting at time 10ms
+0s 2 [node 2] AomdvRoutingProtocol:DoInitialize(0x55f551b423f0)
+0s 2 [node 2] AomdvRoutingProtocol:DoInitialize(): Starting at time 0ms
+0s 3 [node 3] AomdvRoutingProtocol:DoInitialize(0x55f551b43630)
+0s 3 [node 3] AomdvRoutingProtocol:DoInitialize(): Starting at time 28ms
+0s 4 [node 4] AomdvRoutingProtocol:DoInitialize(0x55f551b455c0)
+0s 4 [node 4] AomdvRoutingProtocol:DoInitialize(): Starting at time 23ms
+0s 5 [node 5] AomdvRoutingProtocol:DoInitialize(0x55f551b47b60)
+0s 5 [node 5] AomdvRoutingProtocol:DoInitialize(): Starting at time 91ms
+0s 6 [node 6] AomdvRoutingProtocol:DoInitialize(0x55f551b4a100)
+0s 6 [node 6] AomdvRoutingProtocol:DoInitialize(): Starting at time 86ms
+0s 7 [node 7] AomdvRoutingProtocol:DoInitialize(0x55f551b4c6a0)
+0s 7 [node 7] AomdvRoutingProtocol:DoInitialize(): Starting at time 99ms
+0s 8 [node 8] AomdvRoutingProtocol:DoInitialize(0x55f551b4ee30)
+0s 8 [node 8] AomdvRoutingProtocol:DoInitialize(): Starting at time 99ms
+0s 9 [node 9] AomdvRoutingProtocol:DoInitialize(0x55f551b515c0)
+0s 9 [node 9] AomdvRoutingProtocol:DoInitialize(): Starting at time 27ms
+0s 10 [node 10] AomdvRoutingProtocol:DoInitialize(0x55f551b53d50)
+0s 10 [node 10] AomdvRoutingProtocol:DoInitialize(): Starting at time 16ms
+0s 11 [node 11] AomdvRoutingProtocol:DoInitialize(0x55f551b564e0)
+0s 11 [node 11] AomdvRoutingProtocol:DoInitialize(): Starting at time 81ms
+0s 12 [node 12] AomdvRoutingProtocol:DoInitialize(0x55f551b58c70)
+0s 12 [node 12] AomdvRoutingProtocol:DoInitialize(): Starting at time 95ms
+0s 13 [node 13] AomdvRoutingProtocol:DoInitialize(0x55f551b5b400)
+0s 13 [node 13] AomdvRoutingProtocol:DoInitialize(): Starting at time 60ms
+0s 14 [node 14] AomdvRoutingProtocol:DoInitialize(0x55f551b5db90)
+0s 14 [node 14] AomdvRoutingProtocol:DoInitialize(): Starting at time 64ms
+0s 15 [node 15] AomdvRoutingProtocol:DoInitialize(0x55f551b60320)
+0s 15 [node 15] AomdvRoutingProtocol:DoInitialize(): Starting at time 25ms
+0s 16 [node 16] AomdvRoutingProtocol:DoInitialize(0x55f551b62ab0)
+0s 16 [node 16] AomdvRoutingProtocol:DoInitialize(): Starting at time 17ms
+0s 17 [node 17] AomdvRoutingProtocol:DoInitialize(0x55f551b65240)
+0s 17 [node 17] AomdvRoutingProtocol:DoInitialize(): Starting at time 65ms
+0s 18 [node 18] AomdvRoutingProtocol:DoInitialize(0x55f551b679d0)
+0s 18 [node 18] AomdvRoutingProtocol:DoInitialize(): Starting at time 78ms
+0s 19 [node 19] AomdvRoutingProtocol:DoInitialize(0x55f551b6a160)
+0s 19 [node 19] AomdvRoutingProtocol:DoInitialize(): Starting at time 1ms
+0s 20 [node 20] AomdvRoutingProtocol:DoInitialize(0x55f551b6c8f0)
+0s 20 [node 20] AomdvRoutingProtocol:DoInitialize(): Starting at time 100ms
+0s 21 [node 21] AomdvRoutingProtocol:DoInitialize(0x55f551b6f080)
+0s 21 [node 21] AomdvRoutingProtocol:DoInitialize(): Starting at time 80ms
+0s 22 [node 22] AomdvRoutingProtocol:DoInitialize(0x55f551b71810)
+0s 22 [node 22] AomdvRoutingProtocol:DoInitialize(): Starting at time 94ms
+0s 23 [node 23] AomdvRoutingProtocol:DoInitialize(0x55f551b73fa0)
+0s 23 [node 23] AomdvRoutingProtocol:DoInitialize(): Starting at time 53ms
+0s 24 [node 24] AomdvRoutingProtocol:DoInitialize(0x55f551b76730)
+0s 24 [node 24] AomdvRoutingProtocol:DoInitialize(): Starting at time 9ms
+0s -1 [node 0] AomdvRoutingProtocol:Start(0x55f5519e4a20)
+0s -1 [node 1] AomdvRoutingProtocol:Start(0x55f5519ec050)
+0s -1 [node 2] AomdvRoutingProtocol:Start(0x55f551b423f0)
+0s -1 [node 3] AomdvRoutingProtocol:Start(0x55f551b43630)
+0s -1 [node 4] AomdvRoutingProtocol:Start(0x55f551b455c0)
+0s -1 [node 5] AomdvRoutingProtocol:Start(0x55f551b47b60)
+0s -1 [node 6] AomdvRoutingProtocol:Start(0x55f551b4a100)
+0s -1 [node 7] AomdvRoutingProtocol:Start(0x55f551b4c6a0)
+0s -1 [node 8] AomdvRoutingProtocol:Start(0x55f551b4ee30)
+0s -1 [node 9] AomdvRoutingProtocol:Start(0x55f551b515c0)
+0s -1 [node 10] AomdvRoutingProtocol:Start(0x55f551b53d50)
+0s -1 [node 11] AomdvRoutingProtocol:Start(0x55f551b564e0)
+0s -1 [node 12] AomdvRoutingProtocol:Start(0x55f551b58c70)
+0s -1 [node 13] AomdvRoutingProtocol:Start(0x55f551b5b400)
+0s -1 [node 14] AomdvRoutingProtocol:Start(0x55f551b5db90)
+0s -1 [node 15] AomdvRoutingProtocol:Start(0x55f551b60320)
+0s -1 [node 16] AomdvRoutingProtocol:Start(0x55f551b62ab0)
+0s -1 [node 17] AomdvRoutingProtocol:Start(0x55f551b65240)
+0s -1 [node 18] AomdvRoutingProtocol:Start(0x55f551b679d0)
+0s -1 [node 19] AomdvRoutingProtocol:Start(0x55f551b6a160)
+0s -1 [node 20] AomdvRoutingProtocol:Start(0x55f551b6c8f0)
+0s -1 [node 21] AomdvRoutingProtocol:Start(0x55f551b6f080)
+0s -1 [node 22] AomdvRoutingProtocol:Start(0x55f551b71810)
+0s -1 [node 23] AomdvRoutingProtocol:Start(0x55f551b73fa0)
+0s -1 [node 24] AomdvRoutingProtocol:Start(0x55f551b76730)
+0s 2 [node 2] AomdvRoutingProtocol:HelloTimerExpire(0x55f551b423f0)
+0s 2 [node 2] AomdvRoutingProtocol:SendHello(0x55f551b423f0)
+0.001s 19 [node 19] AomdvRoutingProtocol:HelloTimerExpire(0x55f551b6a160)
+0.001s 19 [node 19] AomdvRoutingProtocol:SendHello(0x55f551b6a160)
+Node: 2, Time: +0.00199999999999999999s, Local time: +0.00199999999999999999s, Ipv4ListRouting table
+  Priority: 10 Protocol: ns3::aomdv::RoutingProtocol
+0.002s -1 AomdvRoutingTable:Purge(0x55f551b42500)
+0.002s -1 AomdvRoutingTable:Print(): destination in routing table: 10.1.1.255
+0.002s -1 AomdvRoutingTable:Print(): Size of m_pathlist: 1
+0.002s -1 AomdvRoutingTable:Print(): the destination in route : 10.1.1.255
+0.002s -1 AomdvRoutingTable:Print(): destination in routing table: 127.0.0.1
+0.002s -1 AomdvRoutingTable:Print(): Size of m_pathlist: 0
+0.002s 2 [node 2] AomdvRoutingProtocol:RouteOutput(0x55f551b423f0, tos 0x0 DSCP Default ECN Not-ECT ttl 0 id 0 protocol 17 offset (bytes) 0 flags [none] length: 20 102.102.102.102 > 10.1.1.255, 0)
+0.002s 2 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 102.102.102.102
+0.002s 2 AomdvRoutingTable:LookupValidRoute(0x55f551b42500, 10.1.1.255)
+0.002s 2 AomdvRoutingTable:LookupRoute(0x55f551b42500, 10.1.1.255)
+0.002s 2 AomdvRoutingTable:Purge(0x55f551b42500)
+0.002s 2 AomdvRoutingTable:LookupRoute(): Route to 10.1.1.255 found
+0.002s 2 AomdvRoutingTable:LookupValidRoute(): Route to 10.1.1.255 flag is valid
+0.002s 2 AomdvRoutingTable:PathFindTest(0x7fff9ce3c720)
+0.002s 2 AomdvRoutingTable:PathFindTest(): Size of m_pathList: 1
+0.002s 2 [node 2] AomdvRoutingProtocol:RouteOutput(): Destination: 10.1.1.255
+0.002s 2 [node 2] AomdvRoutingProtocol:RouteOutput(): NextHop: 10.1.1.255
+0.002s 2 AomdvRoutingTable:PrintPaths(0x7fff9ce3c720)
+0.002s 2 AomdvRoutingTable:PrintPaths(): Destination: 10.1.1.255
+0.002s 2 AomdvRoutingTable:PrintPaths(): NextHop: 10.1.1.255 ,HopCount: 1 ,LastHop: 10.1.1.255
+0.002s 2 [node 2] AomdvRoutingProtocol:RouteOutput(): Exist route to 10.1.1.255 from interface 10.1.1.3
+0.002s 2 [node 2] AomdvRoutingProtocol:UpdateRouteLifeTime(0x55f551b423f0, 10.1.1.255, +3000000000.0ns)
+0.002s 2 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 102.102.102.102
+0.002s 2 AomdvRoutingTable:LookupRoute(0x55f551b42500, 10.1.1.255)
+0.002s 2 AomdvRoutingTable:Purge(0x55f551b42500)
+0.002s 2 AomdvRoutingTable:LookupRoute(): Route to 10.1.1.255 found
+0.002s 2 [node 2] AomdvRoutingProtocol:UpdateRouteLifeTime(): Updating VALID route
+0.002s 2 AomdvRoutingTable:Update(0x55f551b42500)
+0.002s 2 AomdvRoutingTable:Update(): Route update to 10.1.1.255 set RreqCnt to 0
+0.002s 2 [node 2] AomdvRoutingProtocol:UpdatePathsLifeTime(0x55f551b423f0, 10.1.1.255, +3000000000.0ns)
+0.002s 2 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 102.102.102.102
+0.002s 2 AomdvRoutingTable:LookupRoute(0x55f551b42500, 10.1.1.255)
+0.002s 2 AomdvRoutingTable:Purge(0x55f551b42500)
+0.002s 2 AomdvRoutingTable:LookupRoute(): Route to 10.1.1.255 found
+0.002s 2 [node 2] AomdvRoutingProtocol:UpdatePathsLifeTime(): Updating VALID route
+0.002s 2 AomdvRoutingTable:Update(0x55f551b42500)
+0.002s 2 AomdvRoutingTable:Update(): Route update to 10.1.1.255 set RreqCnt to 0
+0.002s 2 AomdvRoutingTable:GetPaths(0x7fff9ce3c530)
+0.00512003s 1 [node 1] AomdvRoutingProtocol:RecvAomdv(0x55f5519ec050, 0x55f551b7b020)
+0.00512003s 1 [node 1] AomdvRoutingProtocol:RecvAomdv(): AOMDV node 0x55f5519ec050 received a AOMDV packet from 10.1.1.3 to 10.1.1.2
+0.00512003s 1 [node 1] AomdvRoutingProtocol:UpdateRouteToNeighbor(0x55f5519ec050, sender , 10.1.1.3,  receiver , 10.1.1.2)
+0.00512003s 1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 102.102.102.102
+0.00512003s 1 AomdvRoutingTable:LookupRoute(0x55f5519ec160, 10.1.1.3)
+0.00512003s 1 AomdvRoutingTable:Purge(0x55f5519ec160)
+0.00512003s 1 AomdvRoutingTable:LookupRoute(): Route to 10.1.1.3 not found
+0.00512003s 1 [node 1] AomdvRoutingProtocol:UpdateRouteToNeighbor(): The path to neighbor not found.
+0.00512003s 1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 10.1.1.3
+0.00512003s 1 AomdvRoutingTable:AddRoute(0x55f5519ec160)
+0.00512003s 1 AomdvRoutingTable:Purge(0x55f5519ec160)
+0.00512003s 1 AomdvRoutingTable:PathInsert(0x7fff9ce3ad40)
+0.00512003s 1 AomdvRoutingTable:PathInsert(): Last hop : 10.1.1.3
+0.00512003s 1 [node 1] AomdvRoutingProtocol:RecvReply(0x55f5519ec050,  src , 10.1.1.3)
+0.00512003s 1 [node 1] AomdvRoutingProtocol:RecvReply(): RREP destination 10.1.1.3 RREP origin 10.1.1.3
+0.00512003s 1 [node 1] AomdvRoutingProtocol:IsMyOwnAddress(0x55f5519ec050, 10.1.1.3)
+0.00512003s 1 [node 1] AomdvRoutingProtocol:ProcessHello(0x55f5519ec050, from , 10.1.1.3)
+0.00512003s 1 AomdvRoutingTable:RoutingTableEntry(): Create an routint table entry to 102.102.102.102
+0.00512003s 1 AomdvRoutingTable:LookupRoute(0x55f5519ec160, 10.1.1.3)
+0.00512003s 1 AomdvRoutingTable:Purge(0x55f5519ec160)
+0.00512003s 1 AomdvRoutingTable:LookupRoute(): Route to 10.1.1.3 found
+Command ['/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/scratch/aodv_test'] terminated with signal SIGSEGV. Run it under a debugger to get more information (./waf --run <program> --command-template="gdb --args %s <args>").

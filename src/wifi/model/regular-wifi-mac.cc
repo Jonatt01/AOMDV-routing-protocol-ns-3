@@ -109,7 +109,7 @@ RegularWifiMac::DoInitialize ()
 }
 
 void
-RegularWifiMac::DoDispose ()
+RegularWifiMac::DoDispose () //Blue
 {
   NS_LOG_FUNCTION (this);
   delete m_rxMiddle;
@@ -126,6 +126,10 @@ RegularWifiMac::DoDispose ()
 
   m_phy = 0;
   m_stationManager = 0;
+
+  m_phy_busy = 0; //Blue
+
+  m_phy_busy2 = 0; //Blue
 
   m_dca->Dispose ();
   m_dca = 0;
@@ -232,6 +236,17 @@ RegularWifiMac::SetWifiPhy (Ptr<WifiPhy> phy)
   m_low->SetPhy (phy);
 }
 
+void
+RegularWifiMac::SetWifiPhy(Ptr<WifiPhy> phy, Ptr<WifiPhy> phy_busy, Ptr<WifiPhy> phy_busy2) //Blue
+{
+    NS_LOG_FUNCTION(this << phy);
+    m_phy = phy;
+    m_phy_busy = phy_busy;
+    m_phy_busy2 = phy_busy2;
+    m_dcfManager->SetupPhyListener(phy);
+    m_low->SetPhy(phy, phy_busy, phy_busy2); //Blue
+}
+
 Ptr<WifiPhy>
 RegularWifiMac::GetWifiPhy (void) const
 {
@@ -240,12 +255,14 @@ RegularWifiMac::GetWifiPhy (void) const
 }
 
 void
-RegularWifiMac::ResetWifiPhy (void)
+RegularWifiMac::ResetWifiPhy (void) //Blue
 {
   NS_LOG_FUNCTION (this);
   m_low->ResetPhy ();
   m_dcfManager->RemovePhyListener (m_phy);
   m_phy = 0;
+  m_phy_busy = 0; //Blue
+  m_phy_busy2 = 0; //Blue
 }
 
 void

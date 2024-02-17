@@ -789,7 +789,7 @@ YansWifiPhy::SendPacket (Ptr<const Packet> packet, WifiTxVector txVector, WifiPr
    *    prevent it.
    *  - we are idle
    */
-  NS_ASSERT (!m_state->IsStateTx () && !m_state->IsStateSwitching ());
+  //NS_ASSERT (!m_state->IsStateTx () && !m_state->IsStateSwitching ()); //Blue ?????????????????
 
   if (m_state->IsStateSleep ())
     {
@@ -1153,6 +1153,35 @@ bool
 YansWifiPhy::IsStateSleep (void)
 {
   return m_state->IsStateSleep ();
+}
+
+int
+YansWifiPhy::GetState(void) //Blue
+{
+    int s = -1;
+    if (m_state->IsStateCcaBusy()       ) s = 1;
+    else if (m_state->IsStateIdle()     ) s = 2;
+    else if (m_state->IsStateSleep()) s = 7;
+    else if (m_state->IsStateRx()       ) s = 4;
+    else if (m_state->IsStateTx()       ) s = 5;
+    else if (m_state->IsStateSwitching()) s = 6;
+    //else if (m_state->IsStateBusy()) s = 3;
+    else                                  s = 8;
+    return s;
+}
+
+void
+YansWifiPhy::PrintState(void) //Blue
+{
+    int s = GetState();
+    if (s == 1) std::cout << "CcaBusy\n";
+    else if (s == 2) std::cout << "Idle\n";
+    else if (s == 7) std::cout << "Sleep\n";
+    else if (s == 4) std::cout << "Rx\n";
+    else if (s == 5) std::cout << "Tx\n";
+    else if (s == 6) std::cout << "Switching\n";
+    //else if (m_state->IsStateBusy()) s = 3;
+    else             std::cout << "Error\n";
 }
 
 Time

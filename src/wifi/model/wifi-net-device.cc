@@ -84,26 +84,30 @@ WifiNetDevice::~WifiNetDevice ()
 }
 
 void
-WifiNetDevice::DoDispose (void)
+WifiNetDevice::DoDispose (void) //Blue
 {
-  NS_LOG_FUNCTION_NOARGS ();
-  m_node = 0;
-  m_mac->Dispose ();
-  m_phy->Dispose ();
-  m_stationManager->Dispose ();
-  m_mac = 0;
-  m_phy = 0;
-  m_stationManager = 0;
-  NetDevice::DoDispose ();
+    NS_LOG_FUNCTION_NOARGS();
+    m_node = 0;
+    m_mac->Dispose();
+    m_phy->Dispose();
+    //m_phy_busy->Dispose(); //Blue have a problem
+    m_stationManager->Dispose();
+    m_mac = 0;
+    m_phy = 0;
+    m_phy_busy = 0;
+    m_phy_busy2 = 0;
+    m_stationManager = 0;
+    NetDevice::DoDispose();
 }
 
 void
-WifiNetDevice::DoInitialize (void)
+WifiNetDevice::DoInitialize (void) //Blue
 {
-  m_phy->Initialize ();
-  m_mac->Initialize ();
-  m_stationManager->Initialize ();
-  NetDevice::DoInitialize ();
+    m_phy->Initialize();
+    m_mac->Initialize();
+    //m_phy_busy->Initialize(); //Blue have a problem
+    m_stationManager->Initialize();
+    NetDevice::DoInitialize();
 }
 
 void
@@ -139,6 +143,17 @@ WifiNetDevice::SetPhy (Ptr<WifiPhy> phy)
 {
   m_phy = phy;
   CompleteConfig ();
+}
+
+void
+WifiNetDevice::SetPhy_busy(Ptr<WifiPhy> phy, Ptr<WifiPhy> phy_busy, Ptr<WifiPhy> phy_busy2) //Blue
+{
+    //m_phy_busy->Initialize(); //???? Blue have a problem
+    m_phy = phy;
+    m_phy_busy = phy_busy;
+    m_phy_busy2 = phy_busy2;
+    CompleteConfig();
+    m_mac->SetWifiPhy(m_phy, m_phy_busy, m_phy_busy2);
 }
 
 void

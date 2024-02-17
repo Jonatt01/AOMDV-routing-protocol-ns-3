@@ -775,7 +775,7 @@ void EdcaTxopN::NotifyInternalCollision (void)
 }
 
 void
-EdcaTxopN::NotifyCollision (void)
+EdcaTxopN::NotifyCollision (void) //blue
 {
   NS_LOG_FUNCTION (this);
   auto cw = m_rng->GetNext (0, m_dcf->GetCw ());
@@ -793,8 +793,9 @@ EdcaTxopN::GotCts (double snr, WifiMode txMode)
 }
 
 void
-EdcaTxopN::MissedCts (void)
+EdcaTxopN::MissedCts (void) //blue
 {
+  //std::cout << "MissedCts should be dealt with\n";
   NS_LOG_FUNCTION (this);
   NS_LOG_DEBUG ("missed cts");
   if (!NeedRtsRetransmission ())
@@ -892,7 +893,7 @@ EdcaTxopN::Queue (Ptr<const Packet> packet, const WifiMacHeader &hdr)
 }
 
 void
-EdcaTxopN::GotAck (double snr, WifiMode txMode)
+EdcaTxopN::GotAck (double snr, WifiMode txMode) //blue
 {
   NS_LOG_FUNCTION (this << snr << txMode);
   if (!NeedFragmentation ()
@@ -929,8 +930,17 @@ EdcaTxopN::GotAck (double snr, WifiMode txMode)
         }
       m_currentPacket = 0;
 
-      m_dcf->ResetCw ();
-      m_dcf->StartBackoffNow (m_rng->GetNext (0, m_dcf->GetCw ()));
+      //m_dcf->ResetCw (); //blue
+      
+      //m_dcf->StartBackoffNow (m_rng->GetNext (0, m_dcf->GetCw ()));
+      int my_s = log2((m_dcf->GetCw() + 1) / (m_dcf->GetCwMin() + 1)); //blue 
+      //std::cout << "GetCw(): " << m_dcf->GetCw() << "\n";
+      //std::cout << "GetCwMin(): " << m_dcf->GetCwMin() << "\n";
+      //std::cout << "my_s: " << my_s << "\n";
+      m_low->update_s(my_s);
+      m_dcf->StartBackoffNow((m_dcf->GetCw() + 1) / 2 - 1); //blue
+      //std::cout << (m_dcf->GetCw() + 1) / 2 - 1<<"\n";
+      m_dcf->ResetCw(); //blue
       RestartAccessIfNeeded ();
     }
   else
@@ -948,7 +958,7 @@ EdcaTxopN::GotAck (double snr, WifiMode txMode)
 }
 
 void
-EdcaTxopN::MissedAck (void)
+EdcaTxopN::MissedAck (void) //blue
 {
   NS_LOG_FUNCTION (this);
   NS_LOG_DEBUG ("missed ack");
@@ -1015,6 +1025,7 @@ EdcaTxopN::MissedAck (void)
       m_dcf->UpdateFailedCw ();
     }
   m_dcf->StartBackoffNow (m_rng->GetNext (0, m_dcf->GetCw ()));
+  
   RestartAccessIfNeeded ();
 }
 
@@ -1281,13 +1292,15 @@ EdcaTxopN::Cancel (void)
 }
 
 void
-EdcaTxopN::EndTxNoAck (void)
+EdcaTxopN::EndTxNoAck (void) //blue
 {
   NS_LOG_FUNCTION (this);
   NS_LOG_DEBUG ("a transmission that did not require an ACK just finished");
   m_currentPacket = 0;
-  m_dcf->ResetCw ();
-  m_dcf->StartBackoffNow (m_rng->GetNext (0, m_dcf->GetCw ()));
+  //m_dcf->ResetCw (); //blue
+  //m_dcf->StartBackoffNow (m_rng->GetNext (0, m_dcf->GetCw ()));
+  m_dcf->StartBackoffNow((m_dcf->GetCw() + 1) / 2 - 1); //blue
+  m_dcf->ResetCw(); //blue
   StartAccessIfNeeded ();
 }
 
@@ -1732,7 +1745,7 @@ EdcaTxopN::AssignStreams (int64_t stream)
 }
 
 void
-EdcaTxopN::DoInitialize ()
+EdcaTxopN::DoInitialize () //blue
 {
   NS_LOG_FUNCTION (this);
   m_dcf->ResetCw ();

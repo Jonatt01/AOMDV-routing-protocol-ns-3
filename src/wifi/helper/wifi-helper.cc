@@ -125,10 +125,60 @@ WifiHelper::Install (const WifiPhyHelper &phyHelper,
 }
 
 NetDeviceContainer
+WifiHelper::Install (const WifiPhyHelper& phyHelper,
+                     const WifiMacHelper& macHelper,
+                     const WifiPhyHelper& phyHelper_busy,
+                     const WifiMacHelper& macHelper_busy,
+                     const WifiPhyHelper& phyHelper_busy2,
+                     const WifiMacHelper& macHelper_busy2, NodeContainer c) const //Blue
+{
+    NetDeviceContainer devices;
+    for (NodeContainer::Iterator i = c.Begin(); i != c.End(); ++i)
+    {
+        Ptr<Node> node = *i;
+        Ptr<WifiNetDevice> device = CreateObject<WifiNetDevice>();
+        Ptr<WifiRemoteStationManager> manager = m_stationManager.Create<WifiRemoteStationManager>();
+        //Ptr<WifiRemoteStationManager> manager_busy = m_stationManager_busy.Create<WifiRemoteStationManager>();
+        Ptr<WifiMac> mac = macHelper.Create();
+        Ptr<WifiPhy> phy = phyHelper.Create(node, device);
+        Ptr<WifiMac> mac_busy = macHelper_busy.Create();
+        Ptr<WifiPhy> phy_busy = phyHelper_busy.Create(node, device);
+        Ptr<WifiMac> mac_busy2 = macHelper_busy.Create();
+        Ptr<WifiPhy> phy_busy2 = phyHelper_busy.Create(node, device);
+        mac->SetAddress(Mac48Address::Allocate());
+        mac->ConfigureStandard(m_standard);
+        phy->ConfigureStandard(m_standard);
+        mac_busy->SetAddress(Mac48Address::Allocate());
+        mac_busy->ConfigureStandard(m_standard);
+        phy_busy->ConfigureStandard(m_standard);
+        phy_busy2->ConfigureStandard(m_standard);
+        //device->SetMac(mac, mac_busy);
+        device->SetMac(mac);
+        device->SetPhy_busy(phy, phy_busy, phy_busy2); //Blue
+        device->SetRemoteStationManager(manager);
+        node->AddDevice(device);
+        devices.Add(device);
+        NS_LOG_DEBUG("node=" << node << ", mob=" << node->GetObject<MobilityModel>());
+    }
+    return devices;
+}
+
+NetDeviceContainer
 WifiHelper::Install (const WifiPhyHelper &phy,
                      const WifiMacHelper &mac, Ptr<Node> node) const
 {
   return Install (phy, mac, NodeContainer (node));
+}
+
+NetDeviceContainer
+WifiHelper::Install (const WifiPhyHelper& phy,
+                     const WifiMacHelper& mac,
+                     const WifiPhyHelper& phy_busy,
+                     const WifiMacHelper& mac_busy,
+                     const WifiPhyHelper& phy_busy2,
+                     const WifiMacHelper& mac_busy2, Ptr<Node> node) const //Blue
+{
+    return Install(phy, mac, phy_busy, mac_busy, phy_busy2, mac_busy2, NodeContainer(node));
 }
 
 NetDeviceContainer
@@ -137,6 +187,18 @@ WifiHelper::Install (const WifiPhyHelper &phy,
 {
   Ptr<Node> node = Names::Find<Node> (nodeName);
   return Install (phy, mac, NodeContainer (node));
+}
+
+NetDeviceContainer
+WifiHelper::Install (const WifiPhyHelper& phy,
+                     const WifiMacHelper& mac,
+                     const WifiPhyHelper& phy_busy,
+                     const WifiMacHelper& mac_busy,
+                     const WifiPhyHelper& phy_busy2,
+                     const WifiMacHelper& mac_busy2, std::string nodeName) const //Blue
+{
+    Ptr<Node> node = Names::Find<Node>(nodeName);
+    return Install(phy, mac, phy_busy, mac_busy, phy_busy2, mac_busy2, NodeContainer(node));
 }
 
 void
