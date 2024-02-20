@@ -79,7 +79,7 @@ RoutingTableEntry::RoutingTableEntry (Ipv4Address dst, bool vSeqNo, uint32_t seq
   m_lastHopCount (INFINITY2), 
   m_numPaths (0), m_error (false)
 {
-  NS_LOG_DEBUG( "Create an routint table entry to " << dst );
+  NS_LOG_DEBUG( "Create an routing table entry to " << dst );
 }
 
 RoutingTableEntry::~RoutingTableEntry ()
@@ -105,7 +105,8 @@ RoutingTableEntry::PathInsert (Ptr<NetDevice> dev, Ipv4Address nextHop, uint16_t
                                Time expireTime, Ipv4Address lastHop, Ipv4InterfaceAddress iface)
 {
   NS_LOG_FUNCTION(this);
-  Path path(dev, m_dst, nextHop, hopCount, expireTime, lastHop, iface);
+  // Path path(dev, m_dst, nextHop, hopCount, expireTime, lastHop, iface);
+  Path path(dev, m_dst, nextHop, hopCount, Simulator::GetMaximumSimulationTime (), lastHop, iface);
   NS_LOG_DEBUG("Last hop : " << path.m_lastHop);
   m_pathList.push_back (path);
   m_numPaths += 1;     //TODO
@@ -260,6 +261,7 @@ RoutingTableEntry::PathEmpty (void) const
 struct RoutingTableEntry::Path * 
 RoutingTableEntry::PathFind (void) 
 {
+  NS_LOG_DEBUG("Size of m_pathList: " << m_pathList.size());
   Path *path = NULL;
   std::vector<Path>::iterator i = m_pathList.begin ();
   path = &(*i);
@@ -486,17 +488,17 @@ RoutingTableEntry::Print (Ptr<OutputStreamWrapper> stream) const
     {
     case VALID:
       {
-        *os << "UP";
+        NS_LOG_DEBUG("UP");
         break;
       }
     case INVALID:
       {
-        *os << "DOWN";
+        NS_LOG_DEBUG("DOWN");
         break;
       }
     case IN_SEARCH:
       {
-        *os << "IN_SEARCH";
+        NS_LOG_DEBUG("IN_SEARCH");
         break;
       }
     }
@@ -504,7 +506,8 @@ RoutingTableEntry::Print (Ptr<OutputStreamWrapper> stream) const
    for (std::vector<Path>::const_iterator i = m_pathList.begin (); i!= m_pathList.end (); ++i)
      {
       NS_LOG_DEBUG("the destination in route : " << i->m_ipv4Route->GetDestination());
-       i->Print (stream);
+      NS_LOG_DEBUG("expire in " << i->GetExpire() << " seconds." );
+      //  i->Print (stream); // Jonathan
        *os << "\n\t\t\t\t";
      }
   *stream->GetStream () << "\n";
