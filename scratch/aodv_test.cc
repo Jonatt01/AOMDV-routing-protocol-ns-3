@@ -29,7 +29,7 @@ using namespace ns3;
 int main (int argc, char *argv[])
 {
   // LogComponentEnableAll(LogLevel(LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
-  LogComponentEnable("AomdvRoutingTable", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
+  LogComponentEnable("AomdvRoutingTable", LogLevel(LOG_LEVEL_ALL));
   // LogComponentEnable("DcaTxop", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
   LogComponentEnable("AomdvRoutingProtocol", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
   // LogComponentEnable("MacLow", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
@@ -190,6 +190,7 @@ int main (int argc, char *argv[])
     Ptr<OutputStreamWrapper> routingStream = Create<OutputStreamWrapper> (&std::cout);
     aodv.PrintRoutingTableAt (Seconds (4), c.Get(0), routingStream);
     aodv.PrintRoutingTableAt (Seconds (5.01), c.Get(0), routingStream);
+    aodv.PrintRoutingTableAt (Seconds (6.007), c.Get(0), routingStream);
     // aodv.PrintRoutingTableEvery(Seconds(5), c.Get(2), routingStream);
   }
 

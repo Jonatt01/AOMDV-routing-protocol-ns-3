@@ -1,13 +1,13 @@
-# project ns (3-dev) configured on Sun Feb  4 16:59:44 2024 by
+# project ns (3-dev) configured on Tue Feb 20 10:57:39 2024 by
 # waf 1.8.19 (abi 98, python 20711f0 on linux2)
 # using ./waf configure --disable-examples --disable-tests
 #
 ----------------------------------------
 Setting top to
-/home/jonathan/IEEE802.11ah-ECA-DBTMA
+/home/jonathan/AOMDV-routing-protocol-ns-3
 ----------------------------------------
 Setting out to
-/home/jonathan/IEEE802.11ah-ECA-DBTMA/build
+/home/jonathan/AOMDV-routing-protocol-ns-3/build
 ----------------------------------------
 Checking for 'gcc' (C compiler)
 find program=['gcc', 'cc'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CC' -> ['/usr/bin/gcc']
@@ -724,9 +724,9 @@ Checking for compilation flag -Wl,--soname=foo support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_e169e76ac063c36b68815c69f9c86b46/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_31e9825dc57f01cb49f2aa68dfa1d1a5/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_e169e76ac063c36b68815c69f9c86b46/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-std=c++11', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_31e9825dc57f01cb49f2aa68dfa1d1a5/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for program 'python'
@@ -829,12 +829,12 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_df71b25550e8ad2d8f321d62236c516b/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_b8840bfcecf42644e0bbc769f22b0ad7/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-fno-strict-aliasing', '-fdebug-prefix-map=/build/python2.7-D7NSzq/python2.7-2.7.17=.', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_df71b25550e8ad2d8f321d62236c516b/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_df71b25550e8ad2d8f321d62236c516b/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-fno-strict-aliasing', '-fdebug-prefix-map=/build/python2.7-D7NSzq/python2.7-2.7.17=.', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_b8840bfcecf42644e0bbc769f22b0ad7/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_b8840bfcecf42644e0bbc769f22b0ad7/testbuild/testprog[0m
 
-['/usr/bin/g++', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_df71b25550e8ad2d8f321d62236c516b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
+['/usr/bin/g++', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_b8840bfcecf42644e0bbc769f22b0ad7/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
 yes
 ------------------------------------------------------------------
 Asking python-config for pyext '--cflags --libs --ldflags' flags
@@ -866,30 +866,30 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_00c030598550cd545eb7b1ac21b99395/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_baa32436095ffe4e6ac7f82fbd2a665a/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-fPIC', '-fno-strict-aliasing', '-fdebug-prefix-map=/build/python2.7-D7NSzq/python2.7-2.7.17=.', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_00c030598550cd545eb7b1ac21b99395/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_00c030598550cd545eb7b1ac21b99395/testbuild/testprog.so[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-fPIC', '-fno-strict-aliasing', '-fdebug-prefix-map=/build/python2.7-D7NSzq/python2.7-2.7.17=.', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_baa32436095ffe4e6ac7f82fbd2a665a/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_baa32436095ffe4e6ac7f82fbd2a665a/testbuild/testprog.so[0m
 
-['/usr/bin/g++', '-shared', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_00c030598550cd545eb7b1ac21b99395/testbuild/testprog.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
+['/usr/bin/g++', '-shared', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_baa32436095ffe4e6ac7f82fbd2a665a/testbuild/testprog.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
 yes
 ------------------------------------------------------------------
 Checking for compilation flag -fvisibility=hidden support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_e169e76ac063c36b68815c69f9c86b46/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_31e9825dc57f01cb49f2aa68dfa1d1a5/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-fvisibility=hidden', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_e169e76ac063c36b68815c69f9c86b46/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-fvisibility=hidden', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_31e9825dc57f01cb49f2aa68dfa1d1a5/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -Wno-array-bounds support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_e169e76ac063c36b68815c69f9c86b46/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_31e9825dc57f01cb49f2aa68dfa1d1a5/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-Wno-array-bounds', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_e169e76ac063c36b68815c69f9c86b46/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-Wno-array-bounds', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_31e9825dc57f01cb49f2aa68dfa1d1a5/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for pybindgen location
@@ -902,15 +902,15 @@ err: Traceback (most recent call last):
 ImportError: No module named pybindgen
 
 not found
-from /home/jonathan/IEEE802.11ah-ECA-DBTMA/bindings/python: Could not find the python module 'pybindgen'
+from /home/jonathan/AOMDV-routing-protocol-ns-3/bindings/python: Could not find the python module 'pybindgen'
 ------------------------------------------------------------------
 Checking boost includes
 headers not found, please provide a --boost-includes argument (see help)
-from /home/jonathan/IEEE802.11ah-ECA-DBTMA/src: The configuration failed
+from /home/jonathan/AOMDV-routing-protocol-ns-3/src: The configuration failed
 ------------------------------------------------------------------
 Checking boost includes
 headers not found, please provide a --boost-includes argument (see help)
-from /home/jonathan/IEEE802.11ah-ECA-DBTMA/src: The configuration failed
+from /home/jonathan/AOMDV-routing-protocol-ns-3/src: The configuration failed
 ------------------------------------------------------------------
 Checking for click location
 not found
@@ -945,9 +945,9 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_e96b76cd00320e7fdaf3cb216dfd33c9/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_b6fee2ce68eb0f0e1280f25772eb8b38/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_e96b76cd00320e7fdaf3cb216dfd33c9/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_b6fee2ce68eb0f0e1280f25772eb8b38/testbuild/test.cpp.1.o']
 err: ../test.cpp: In function ‘int main(int, char**)’:
 ../test.cpp:5:7: error: ‘uint128_t’ was not declared in this scope
   if ((uint128_t *) 0) return 0;
@@ -970,18 +970,18 @@ err: ../test.cpp: In function ‘int main(int, char**)’:
               ^~~~~~~~~
               uint32_t
 
-from /home/jonathan/IEEE802.11ah-ECA-DBTMA/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/jonathan/IEEE802.11ah-ECA-DBTMA/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
+from /home/jonathan/AOMDV-routing-protocol-ns-3/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/jonathan/AOMDV-routing-protocol-ns-3/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
     bld.compile()
-  File "/home/jonathan/IEEE802.11ah-ECA-DBTMA/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
+  File "/home/jonathan/AOMDV-routing-protocol-ns-3/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140539498337552: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_e96b76cd00320e7fdaf3cb216dfd33c9/testbuild/test.cpp.1.o']
+	{task 140541474017936: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_b6fee2ce68eb0f0e1280f25772eb8b38/testbuild/test.cpp.1.o']
 
 not found
-from /home/jonathan/IEEE802.11ah-ECA-DBTMA/src/core: The configuration failed
+from /home/jonathan/AOMDV-routing-protocol-ns-3/src/core: The configuration failed
 ------------------------------------------------------------------
 Checking for type __uint128_t
 ==>
@@ -995,12 +995,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_f898643eb458815c8ebb4575556934d3/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_053d7a7756edbd56001d9b87975aa628/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_f898643eb458815c8ebb4575556934d3/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_f898643eb458815c8ebb4575556934d3/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_053d7a7756edbd56001d9b87975aa628/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_053d7a7756edbd56001d9b87975aa628/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_f898643eb458815c8ebb4575556934d3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_053d7a7756edbd56001d9b87975aa628/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking high precision implementation
@@ -1016,12 +1016,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_cf001841fa8fe2203bf0c6ad7f198e0a/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_c1a22e1ac2de7c1889c71e958973d9f4/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_cf001841fa8fe2203bf0c6ad7f198e0a/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_cf001841fa8fe2203bf0c6ad7f198e0a/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_c1a22e1ac2de7c1889c71e958973d9f4/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_c1a22e1ac2de7c1889c71e958973d9f4/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_cf001841fa8fe2203bf0c6ad7f198e0a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_c1a22e1ac2de7c1889c71e958973d9f4/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header inttypes.h
@@ -1034,12 +1034,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_89d8021e9abd2a1c6d7eb76196f4e315/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_80c08d9de967c0c0e22e0bb9dfa86e62/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_89d8021e9abd2a1c6d7eb76196f4e315/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_89d8021e9abd2a1c6d7eb76196f4e315/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_80c08d9de967c0c0e22e0bb9dfa86e62/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_80c08d9de967c0c0e22e0bb9dfa86e62/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_89d8021e9abd2a1c6d7eb76196f4e315/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_80c08d9de967c0c0e22e0bb9dfa86e62/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -1052,26 +1052,26 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_fd47a6f1d2deda7ce96760be6e136b44/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_ac3c7df81e95ad8676226544e815be15/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_fd47a6f1d2deda7ce96760be6e136b44/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_ac3c7df81e95ad8676226544e815be15/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:10: fatal error: sys/inttypes.h: No such file or directory
  #include <sys/inttypes.h>
           ^~~~~~~~~~~~~~~~
 compilation terminated.
 
-from /home/jonathan/IEEE802.11ah-ECA-DBTMA/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/jonathan/IEEE802.11ah-ECA-DBTMA/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
+from /home/jonathan/AOMDV-routing-protocol-ns-3/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/jonathan/AOMDV-routing-protocol-ns-3/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
     bld.compile()
-  File "/home/jonathan/IEEE802.11ah-ECA-DBTMA/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
+  File "/home/jonathan/AOMDV-routing-protocol-ns-3/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140539497911312: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_fd47a6f1d2deda7ce96760be6e136b44/testbuild/test.cpp.1.o']
+	{task 140541474104912: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_ac3c7df81e95ad8676226544e815be15/testbuild/test.cpp.1.o']
 
 not found
-from /home/jonathan/IEEE802.11ah-ECA-DBTMA/src/core: The configuration failed
+from /home/jonathan/AOMDV-routing-protocol-ns-3/src/core: The configuration failed
 ------------------------------------------------------------------
 Checking for header sys/types.h
 ==>
@@ -1083,12 +1083,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_ad56452755e1a3c14ef844a5e4f11b8e/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_04ec2321118b2ad066f8038ae276bba8/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_ad56452755e1a3c14ef844a5e4f11b8e/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_ad56452755e1a3c14ef844a5e4f11b8e/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_04ec2321118b2ad066f8038ae276bba8/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_04ec2321118b2ad066f8038ae276bba8/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_ad56452755e1a3c14ef844a5e4f11b8e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_04ec2321118b2ad066f8038ae276bba8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/stat.h
@@ -1101,12 +1101,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_15ad5e3aa3fd9284589618da339b52ec/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_f6ef3d834e6bae0ce63f91280430fbe9/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_15ad5e3aa3fd9284589618da339b52ec/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_15ad5e3aa3fd9284589618da339b52ec/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_f6ef3d834e6bae0ce63f91280430fbe9/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_f6ef3d834e6bae0ce63f91280430fbe9/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_15ad5e3aa3fd9284589618da339b52ec/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_f6ef3d834e6bae0ce63f91280430fbe9/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header dirent.h
@@ -1119,12 +1119,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_545474e1f6ee178b302298ab1beb0aa5/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_bf3668f57bf8a005c13443cb20d1b2a5/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_545474e1f6ee178b302298ab1beb0aa5/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_545474e1f6ee178b302298ab1beb0aa5/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_bf3668f57bf8a005c13443cb20d1b2a5/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_bf3668f57bf8a005c13443cb20d1b2a5/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_545474e1f6ee178b302298ab1beb0aa5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_bf3668f57bf8a005c13443cb20d1b2a5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header stdlib.h
@@ -1137,12 +1137,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_234db22cadd62eb76c60977aea80e545/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_c9913de6816b168e348b080bcb7af92c/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_234db22cadd62eb76c60977aea80e545/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_234db22cadd62eb76c60977aea80e545/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_c9913de6816b168e348b080bcb7af92c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_c9913de6816b168e348b080bcb7af92c/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_234db22cadd62eb76c60977aea80e545/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_c9913de6816b168e348b080bcb7af92c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header signal.h
@@ -1155,12 +1155,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_d6e66e2b1aeccc49c836638fda9e7e19/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_a09ecc11ecb6383e18f196981c86acb1/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_d6e66e2b1aeccc49c836638fda9e7e19/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_d6e66e2b1aeccc49c836638fda9e7e19/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_a09ecc11ecb6383e18f196981c86acb1/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_a09ecc11ecb6383e18f196981c86acb1/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_d6e66e2b1aeccc49c836638fda9e7e19/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_a09ecc11ecb6383e18f196981c86acb1/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header pthread.h
@@ -1175,12 +1175,12 @@ int main ()
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_ac39b3de6b7037fdf227dd922fbd1205/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_bb13dc9c22124ae9565bc920d2487be2/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_ac39b3de6b7037fdf227dd922fbd1205/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_ac39b3de6b7037fdf227dd922fbd1205/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_bb13dc9c22124ae9565bc920d2487be2/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_bb13dc9c22124ae9565bc920d2487be2/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_ac39b3de6b7037fdf227dd922fbd1205/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_bb13dc9c22124ae9565bc920d2487be2/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header stdint.h
@@ -1193,12 +1193,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_cf001841fa8fe2203bf0c6ad7f198e0a/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_c1a22e1ac2de7c1889c71e958973d9f4/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_cf001841fa8fe2203bf0c6ad7f198e0a/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_cf001841fa8fe2203bf0c6ad7f198e0a/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_c1a22e1ac2de7c1889c71e958973d9f4/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_c1a22e1ac2de7c1889c71e958973d9f4/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_cf001841fa8fe2203bf0c6ad7f198e0a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_c1a22e1ac2de7c1889c71e958973d9f4/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header inttypes.h
@@ -1211,12 +1211,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_89d8021e9abd2a1c6d7eb76196f4e315/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_80c08d9de967c0c0e22e0bb9dfa86e62/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_89d8021e9abd2a1c6d7eb76196f4e315/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_89d8021e9abd2a1c6d7eb76196f4e315/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_80c08d9de967c0c0e22e0bb9dfa86e62/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_80c08d9de967c0c0e22e0bb9dfa86e62/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_89d8021e9abd2a1c6d7eb76196f4e315/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_80c08d9de967c0c0e22e0bb9dfa86e62/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -1229,26 +1229,26 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_fd47a6f1d2deda7ce96760be6e136b44/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_ac3c7df81e95ad8676226544e815be15/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_fd47a6f1d2deda7ce96760be6e136b44/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_ac3c7df81e95ad8676226544e815be15/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:10: fatal error: sys/inttypes.h: No such file or directory
  #include <sys/inttypes.h>
           ^~~~~~~~~~~~~~~~
 compilation terminated.
 
-from /home/jonathan/IEEE802.11ah-ECA-DBTMA/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/jonathan/IEEE802.11ah-ECA-DBTMA/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
+from /home/jonathan/AOMDV-routing-protocol-ns-3/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/jonathan/AOMDV-routing-protocol-ns-3/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
     bld.compile()
-  File "/home/jonathan/IEEE802.11ah-ECA-DBTMA/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
+  File "/home/jonathan/AOMDV-routing-protocol-ns-3/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140539498241936: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_fd47a6f1d2deda7ce96760be6e136b44/testbuild/test.cpp.1.o']
+	{task 140541474497616: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_ac3c7df81e95ad8676226544e815be15/testbuild/test.cpp.1.o']
 
 not found
-from /home/jonathan/IEEE802.11ah-ECA-DBTMA/src/core: The configuration failed
+from /home/jonathan/AOMDV-routing-protocol-ns-3/src/core: The configuration failed
 ------------------------------------------------------------------
 Checking for library rt
 ==>
@@ -1259,12 +1259,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_47b7e909a3dfcd8038dfd3179679a0b4/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_035d2084bd0b658adddb375df6f77c0f/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_47b7e909a3dfcd8038dfd3179679a0b4/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_47b7e909a3dfcd8038dfd3179679a0b4/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_035d2084bd0b658adddb375df6f77c0f/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_035d2084bd0b658adddb375df6f77c0f/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_47b7e909a3dfcd8038dfd3179679a0b4/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_035d2084bd0b658adddb375df6f77c0f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
 yes
 ------------------------------------------------------------------
 Checking for header sys/ioctl.h
@@ -1277,12 +1277,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_0ca7af5047fc14074ed55b5596fb686b/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_adf57b2e6c716c7b872dccfeaf41740c/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_0ca7af5047fc14074ed55b5596fb686b/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_0ca7af5047fc14074ed55b5596fb686b/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_adf57b2e6c716c7b872dccfeaf41740c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_adf57b2e6c716c7b872dccfeaf41740c/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_0ca7af5047fc14074ed55b5596fb686b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_adf57b2e6c716c7b872dccfeaf41740c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header net/if.h
@@ -1295,12 +1295,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_e979fd5b4cc7ca2f6f0465e9612be350/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_995b13fdd1e42192b4482c896f64fa38/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_e979fd5b4cc7ca2f6f0465e9612be350/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_e979fd5b4cc7ca2f6f0465e9612be350/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_995b13fdd1e42192b4482c896f64fa38/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_995b13fdd1e42192b4482c896f64fa38/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_e979fd5b4cc7ca2f6f0465e9612be350/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_995b13fdd1e42192b4482c896f64fa38/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header net/ethernet.h
@@ -1313,12 +1313,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_ada3a30226fc4f18d2adacbdb0a36514/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_ba1c8d9978904477a9a63ff1914a0c15/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_ada3a30226fc4f18d2adacbdb0a36514/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_ada3a30226fc4f18d2adacbdb0a36514/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_ba1c8d9978904477a9a63ff1914a0c15/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_ba1c8d9978904477a9a63ff1914a0c15/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_ada3a30226fc4f18d2adacbdb0a36514/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_ba1c8d9978904477a9a63ff1914a0c15/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header linux/if_tun.h
@@ -1331,12 +1331,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_07605665b32496fb6d4b6fc61bcb3110/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_71e64319f78c1e797c0086da7ef6968d/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_07605665b32496fb6d4b6fc61bcb3110/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_07605665b32496fb6d4b6fc61bcb3110/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_71e64319f78c1e797c0086da7ef6968d/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_71e64319f78c1e797c0086da7ef6968d/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_07605665b32496fb6d4b6fc61bcb3110/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_71e64319f78c1e797c0086da7ef6968d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header netpacket/packet.h
@@ -1349,12 +1349,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_2a9cf9f3050f66954bd62c93b661f7b9/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_07dc8f7cf67285046131e21e8ea4297f/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_2a9cf9f3050f66954bd62c93b661f7b9/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_2a9cf9f3050f66954bd62c93b661f7b9/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_07dc8f7cf67285046131e21e8ea4297f/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_07dc8f7cf67285046131e21e8ea4297f/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_2a9cf9f3050f66954bd62c93b661f7b9/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_07dc8f7cf67285046131e21e8ea4297f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for NSC location
@@ -1376,12 +1376,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_07605665b32496fb6d4b6fc61bcb3110/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_71e64319f78c1e797c0086da7ef6968d/test.cpp[0m
 
-['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_07605665b32496fb6d4b6fc61bcb3110/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_07605665b32496fb6d4b6fc61bcb3110/testbuild/testprog[0m
+['/usr/bin/g++', '-std=c++11', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_71e64319f78c1e797c0086da7ef6968d/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_71e64319f78c1e797c0086da7ef6968d/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_07605665b32496fb6d4b6fc61bcb3110/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_71e64319f78c1e797c0086da7ef6968d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for program 'sudo'
@@ -1400,41 +1400,41 @@ to the PKG_CONFIG_PATH environment variable
 No package 'gsl' found
 
 not found
-from /home/jonathan/IEEE802.11ah-ECA-DBTMA: The configuration failed
+from /home/jonathan/AOMDV-routing-protocol-ns-3: The configuration failed
 ------------------------------------------------------------------
 python-config
 not found
 find program=['libgcrypt-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='LIBGCRYPT_CONFIG' -> None
-from /home/jonathan/IEEE802.11ah-ECA-DBTMA: Could not find the program ['libgcrypt-config']
+from /home/jonathan/AOMDV-routing-protocol-ns-3: Could not find the program ['libgcrypt-config']
 ------------------------------------------------------------------
 Checking for compilation flag -Wno-error=deprecated-d... support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_5a93220313496b014b3680fe03db5de6/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_8f942e24009e3c517a59cc707eeee818/test.c[0m
 
-['/usr/bin/gcc', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_5a93220313496b014b3680fe03db5de6/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_8f942e24009e3c517a59cc707eeee818/testbuild/test.c.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_5a93220313496b014b3680fe03db5de6/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_8f942e24009e3c517a59cc707eeee818/test.c[0m
 
-['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_5a93220313496b014b3680fe03db5de6/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_8f942e24009e3c517a59cc707eeee818/testbuild/test.c.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_5a93220313496b014b3680fe03db5de6/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_8f942e24009e3c517a59cc707eeee818/test.c[0m
 
-['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/jonathan/IEEE802.11ah-ECA-DBTMA/build/.conf_check_5a93220313496b014b3680fe03db5de6/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/jonathan/AOMDV-routing-protocol-ns-3/build/.conf_check_8f942e24009e3c517a59cc707eeee818/testbuild/test.c.1.o']
 ok
 ------------------------------------------------------------------
 Checking for program 'doxygen'
 not found
 find program=['doxygen'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='DOXYGEN' -> None
-from /home/jonathan/IEEE802.11ah-ECA-DBTMA: Could not find the program ['doxygen']
+from /home/jonathan/AOMDV-routing-protocol-ns-3: Could not find the program ['doxygen']
