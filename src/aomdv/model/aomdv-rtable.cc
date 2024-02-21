@@ -79,7 +79,7 @@ RoutingTableEntry::RoutingTableEntry (Ipv4Address dst, bool vSeqNo, uint32_t seq
   m_lastHopCount (INFINITY2), 
   m_numPaths (0), m_error (false)
 {
-  NS_LOG_DEBUG( "Create an routint table entry to " << dst );
+  // NS_LOG_DEBUG( "Create an routing table entry to " << dst );
 }
 
 RoutingTableEntry::~RoutingTableEntry ()
@@ -92,11 +92,13 @@ Our contribution
 void 
 RoutingTableEntry::PrintPaths() 
 {
-  NS_LOG_FUNCTION(this);
+  // NS_LOG_FUNCTION(this);
   for (std::vector<Path>::const_iterator i = m_pathList.begin(); i != m_pathList.end(); ++i) 
     {
+      NS_LOG_DEBUG("--------------------------------------------------");
       NS_LOG_DEBUG("Destination: " << i->m_ipv4Route->GetDestination());
       NS_LOG_DEBUG("NextHop: " << i->GetNextHop ()<<" ,HopCount: "<<i->m_hopCount<<" ,LastHop: "<<i->m_lastHop);
+      NS_LOG_DEBUG("--------------------------------------------------");
     }
 }
 
@@ -105,10 +107,12 @@ RoutingTableEntry::PathInsert (Ptr<NetDevice> dev, Ipv4Address nextHop, uint16_t
                                Time expireTime, Ipv4Address lastHop, Ipv4InterfaceAddress iface)
 {
   NS_LOG_FUNCTION(this);
-  Path path(dev, m_dst, nextHop, hopCount, expireTime, lastHop, iface);
+  // Path path(dev, m_dst, nextHop, hopCount, expireTime, lastHop, iface);
+  Path path(dev, m_dst, nextHop, hopCount, Simulator::GetMaximumSimulationTime (), lastHop, iface);
   NS_LOG_DEBUG("Last hop : " << path.m_lastHop);
   m_pathList.push_back (path);
   m_numPaths += 1;     //TODO
+  SetAdvertisedHopCount( PathGetMaxHopCount() );
   //RoutingTableEntry::Path *p = (struct RoutingTableEntry::Path*)malloc(sizeof(struct RoutingTableEntry::Path));
   Path *p = &path;
   return p;
@@ -126,7 +130,7 @@ bool RoutingTableEntry::PathInsertTest (RoutingTableEntry::Path & path)
 struct RoutingTableEntry::Path* 
 RoutingTableEntry::PathLookup (Ipv4Address id) 
 {
-  NS_LOG_FUNCTION (this << id);
+  // NS_LOG_FUNCTION (this << id);
   for (std::vector<Path>::iterator i = m_pathList.begin (); i!= m_pathList.end (); ++i)
     {
       if (i->m_ipv4Route->GetGateway () == id)
@@ -140,22 +144,41 @@ RoutingTableEntry::PathLookup (Ipv4Address id)
   return NULL;
 }
 
+// OLD
+// struct RoutingTableEntry::Path* 
+// RoutingTableEntry::PathLookupDisjoint (Ipv4Address nh, Ipv4Address lh) 
+// {
+//   NS_LOG_FUNCTION (this << nh << lh);
+//   for (std::vector<Path>::iterator i = m_pathList.begin (); i!= m_pathList.end (); ++i)
+//     {
+//       if (i->m_ipv4Route->GetGateway () == nh && i->m_lastHop == lh)
+//         {
+//           NS_LOG_LOGIC ("Disjoint Path (nexthop " << nh << ", lasthop " << lh << ") found");
+//           Path *path = &(*i);
+//           return path;
+//         }
+//     }
+//   NS_LOG_LOGIC ("Disjoint Path (nexthop " << nh << ", lasthop " << lh << ") not found");
+//   return NULL;
+// }
 
-struct RoutingTableEntry::Path* 
-RoutingTableEntry::PathLookupDisjoint (Ipv4Address nh, Ipv4Address lh) 
+// Jonathan
+bool
+RoutingTableEntry::PathLookupDisjoint (Ipv4Address nh, Ipv4Address lh, Path * path) 
 {
   NS_LOG_FUNCTION (this << nh << lh);
   for (std::vector<Path>::iterator i = m_pathList.begin (); i!= m_pathList.end (); ++i)
     {
       if (i->m_ipv4Route->GetGateway () == nh && i->m_lastHop == lh)
         {
-          NS_LOG_LOGIC ("Disjoint Path " << nh << lh << " found");
-          Path *path = &(*i);
-          return path;
+          NS_LOG_LOGIC ("Disjoint Path (nexthop " << nh << ", lasthop " << lh << ") found");
+          path = &(*i);
+          return true;
         }
     }
-  NS_LOG_LOGIC ("Disjoint Path " << nh << lh <<" not found");
-  return NULL;
+  path = NULL;
+  NS_LOG_LOGIC ("Disjoint Path (nexthop " << nh << ", lasthop " << lh << ") not found");
+  return false;
 }
 
 bool 
@@ -170,7 +193,7 @@ RoutingTableEntry::PathNewDisjoint (Ipv4Address nh, Ipv4Address lh)
         return false;
       }
   }
-  NS_LOG_LOGIC ("Disjoint New Path " << nh << lh <<" not found");
+  NS_LOG_LOGIC ("Disjoint New Path (nexthop " << nh << ", lasthop " << lh << ") not found");
   return true;
 }
 
@@ -260,6 +283,7 @@ RoutingTableEntry::PathEmpty (void) const
 struct RoutingTableEntry::Path * 
 RoutingTableEntry::PathFind (void) 
 {
+  // NS_LOG_DEBUG("Size of m_pathList: " << m_pathList.size());
   Path *path = NULL;
   std::vector<Path>::iterator i = m_pathList.begin ();
   path = &(*i);
@@ -297,7 +321,7 @@ RoutingTableEntry::PathGetMaxHopCount (void)
   uint16_t maxHopCount = 0;
   for (std::vector<Path>::iterator i = m_pathList.begin (); i!= m_pathList.end (); ++i)
   {
-    if (i->m_hopCount > maxHopCount)
+    if (i->m_hopCount != 0 && maxHopCount < i->m_hopCount)
     {
       maxHopCount = i->m_hopCount;
     }
@@ -447,7 +471,7 @@ RoutingTableEntry::GetPrecursors (std::vector<Ipv4Address> & prec) const
 void
 RoutingTableEntry::GetPaths (std::vector<Path> & paths) const
 {
-  NS_LOG_FUNCTION (this);
+  // NS_LOG_FUNCTION (this);
   if (PathEmpty ())
     return;
   for (std::vector<Path>::const_iterator i = m_pathList.begin (); i
@@ -479,6 +503,7 @@ RoutingTableEntry::Invalidate (Time badLinkLifetime)
 void
 RoutingTableEntry::Print (Ptr<OutputStreamWrapper> stream) const
 {
+  NS_LOG_DEBUG("***********************************************");
   NS_LOG_DEBUG("destination in routing table: " << m_dst);
   std::ostream* os = stream->GetStream ();
   *os << m_dst << "\t";
@@ -486,27 +511,30 @@ RoutingTableEntry::Print (Ptr<OutputStreamWrapper> stream) const
     {
     case VALID:
       {
-        *os << "UP";
+        NS_LOG_DEBUG("Flag: UP");
         break;
       }
     case INVALID:
       {
-        *os << "DOWN";
+        NS_LOG_DEBUG("Flag: DOWN");
         break;
       }
     case IN_SEARCH:
       {
-        *os << "IN_SEARCH";
+        NS_LOG_DEBUG("Flag: IN_SEARCH");
         break;
       }
     }
+    NS_LOG_DEBUG("Valid Sequence number: " <<  m_validSeqNo << " Sequence number: " << m_seqNo);
     NS_LOG_DEBUG("Size of m_pathlist: " << m_pathList.size());
    for (std::vector<Path>::const_iterator i = m_pathList.begin (); i!= m_pathList.end (); ++i)
      {
-      NS_LOG_DEBUG("the destination in route : " << i->m_ipv4Route->GetDestination());
-       i->Print (stream);
+      NS_LOG_DEBUG("destination: " << i->m_ipv4Route->GetDestination() << ", nexthop: " << i->m_ipv4Route->GetGateway() << ", lasthop: " << i->m_lastHop);
+      NS_LOG_DEBUG("expire in " << i->GetExpire().GetSeconds() << "seconds.");
+      //  i->Print (stream); // Jonathan
        *os << "\n\t\t\t\t";
      }
+    NS_LOG_DEBUG("***********************************************");
   *stream->GetStream () << "\n";
 }
 
@@ -537,7 +565,10 @@ RoutingTable::LookupRoute (Ipv4Address id, RoutingTableEntry & rt)
       return false;
     }
   rt = i->second;
-  NS_LOG_LOGIC ("Route to " << id << " found");
+
+  NS_LOG_DEBUG("Print path in LookUpRoute.");
+  rt.PrintPaths();
+  // NS_LOG_LOGIC ("Route to " << id << " found");
   return true;
 }
 
@@ -673,7 +704,7 @@ RoutingTable::DeleteAllRoutesFromInterface (Ipv4InterfaceAddress iface)
 void
 RoutingTable::Purge ()
 {
-  NS_LOG_FUNCTION (this);
+  // NS_LOG_FUNCTION (this);
   if (m_ipv4AddressEntry.empty ())
     return;
   for (std::map<Ipv4Address, RoutingTableEntry>::iterator i =
@@ -706,7 +737,7 @@ RoutingTable::Purge ()
 void
 RoutingTable::Purge (std::map<Ipv4Address, RoutingTableEntry> &table) const
 {
-  NS_LOG_FUNCTION (this);
+  // NS_LOG_FUNCTION (this);
   if (table.empty ())
     return;
   for (std::map<Ipv4Address, RoutingTableEntry>::iterator i =
@@ -774,8 +805,11 @@ RoutingTable::Print (Ptr<OutputStreamWrapper> stream) const
 {
   std::map<Ipv4Address, RoutingTableEntry> table = m_ipv4AddressEntry;
   Purge (table);
-  *stream->GetStream () << "\nAOMDV Routing table\n"
-                        << "Destination\tFlag\tGateway\t\tInterface\tExpire\t\tHops\n";
+  // *stream->GetStream () << "\nAOMDV Routing table\n"
+  //                       << "Destination\tFlag\tGateway\t\tInterface\tExpire\t\tHops\n";
+  NS_LOG_DEBUG("AOMDV routing table");
+  // NS_LOG_DEBUG("Destination     SeqNum     Flag     AdvertseHop     RouteList");
+
   for (std::map<Ipv4Address, RoutingTableEntry>::const_iterator i =
          table.begin (); i != table.end (); ++i)
     {

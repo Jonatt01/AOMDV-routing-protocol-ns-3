@@ -119,7 +119,7 @@ public:
                            Time expireTime, Ipv4Address lastHop, Ipv4InterfaceAddress iface);
   bool PathInsertTest (RoutingTableEntry::Path & path); // Jonathan
   struct Path* PathLookup (Ipv4Address id);
-  struct Path* PathLookupDisjoint (Ipv4Address nh, Ipv4Address lh);
+  bool PathLookupDisjoint (Ipv4Address nh, Ipv4Address lh, RoutingTableEntry::Path * path);
   bool PathNewDisjoint (Ipv4Address nh, Ipv4Address lh);
   struct Path* PathLookupLastHop (Ipv4Address id);
   void PathDelete (Ipv4Address id);

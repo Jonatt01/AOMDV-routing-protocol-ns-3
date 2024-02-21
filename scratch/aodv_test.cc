@@ -29,7 +29,7 @@ using namespace ns3;
 int main (int argc, char *argv[])
 {
   // LogComponentEnableAll(LogLevel(LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
-  LogComponentEnable("AomdvRoutingTable", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
+  LogComponentEnable("AomdvRoutingTable", LogLevel(LOG_LEVEL_ALL));
   // LogComponentEnable("DcaTxop", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
   LogComponentEnable("AomdvRoutingProtocol", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
   // LogComponentEnable("MacLow", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
@@ -40,7 +40,7 @@ int main (int argc, char *argv[])
   // std::string phyMode ("DsssRate1Mbps");
   std::string phyMode ("OfdmRate1_2MbpsBW1MHz");
   double sideLength = 100.0;  //(m)
-  double distance = 10;  // m
+  double distance = 40;  // m
   uint32_t numNodes = 25;  // 5x5
   double interval = 0.01; // seconds(Default = 0.001)
   uint32_t packetSize = 100; // bytes(Default = 600)
@@ -188,7 +188,9 @@ int main (int argc, char *argv[])
   if(printRoutingTables)
   {
     Ptr<OutputStreamWrapper> routingStream = Create<OutputStreamWrapper> (&std::cout);
-    aodv.PrintRoutingTableAt (Seconds (0.002), c.Get(2), routingStream);
+    aodv.PrintRoutingTableAt (Seconds (4), c.Get(0), routingStream);
+    aodv.PrintRoutingTableAt (Seconds (5.01), c.Get(0), routingStream);
+    aodv.PrintRoutingTableAt (Seconds (6.007), c.Get(0), routingStream);
     // aodv.PrintRoutingTableEvery(Seconds(5), c.Get(2), routingStream);
   }
 
