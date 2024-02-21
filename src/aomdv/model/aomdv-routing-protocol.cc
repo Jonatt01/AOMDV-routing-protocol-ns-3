@@ -1240,6 +1240,11 @@ RoutingProtocol::RecvRequest (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address s
   uint32_t id = rreqHeader.GetId ();
   Ipv4Address origin = rreqHeader.GetOrigin ();
 
+  if(origin == receiver)
+  {
+    return;
+  }
+
   /*
    *  Node checks to determine whether it has received a RREQ with the same Originator IP Address and RREQ ID.
    *  If such a RREQ has been received, the node silently discards the newly received RREQ.
@@ -1254,7 +1259,7 @@ RoutingProtocol::RecvRequest (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address s
       killRequestPropagation = true;
     }
   
-   if (rreqHeader.GetHopCount () == 0) 
+  if (rreqHeader.GetHopCount () == 0) 
     {
       if(rreqHeader.GetDst() == receiver)
         {
@@ -1266,8 +1271,6 @@ RoutingProtocol::RecvRequest (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address s
           rreqHeader.SetFirstHop (receiver);
         }
       NS_LOG_DEBUG("first hop set successfully : " << rreqHeader.GetFirstHop ());
-    
-      //rq->rq_first_hop = index;
     }
   // Increment RREQ hop count
   uint8_t hop = rreqHeader.GetHopCount () + 1;
@@ -1297,68 +1300,72 @@ RoutingProtocol::RecvRequest (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address s
                            rreqHeader.GetFirstHop (), 
                            m_ipv4->GetAddress (m_ipv4->GetInterfaceForAddress (receiver), 0));
       m_routingTable.AddRoute (newEntry);
+      newEntry.PrintPaths();
     }
   else
     {
       NS_LOG_DEBUG("Reverse path to origin " << origin << " found.");
       toOrigin.PrintPaths();
       if (toOrigin.GetValidSeqNo ())
+      {
+        if (int32_t (rreqHeader.GetOriginSeqno ()) - int32_t (toOrigin.GetSeqNo ()) > 0)
         {
-          if (int32_t (rreqHeader.GetOriginSeqno ()) - int32_t (toOrigin.GetSeqNo ()) > 0)
-            {
-              toOrigin.SetSeqNo (rreqHeader.GetOriginSeqno ());
-              toOrigin.SetAdvertisedHopCount (INFINITY2);
-              toOrigin.PathAllDelete ();
-              toOrigin.SetFlag (VALID);
-              Ptr<NetDevice> dev = m_ipv4->GetNetDevice (m_ipv4->GetInterfaceForAddress (receiver));
-              reversePath = toOrigin.PathInsert (dev, src, rreqHeader.GetHopCount ()+1, 
-                                                 Time ((2 * m_netTraversalTime - 2 * hop * m_nodeTraversalTime)), 
-                                                 rreqHeader.GetFirstHop (), 
-                                                 m_ipv4->GetAddress (m_ipv4->GetInterfaceForAddress (receiver), 0));
-              toOrigin.SetLastHopCount (toOrigin.PathGetMaxHopCount ());           
-            }
+          NS_LOG_DEBUG("Receive RREQ : condition 1 - seq num in routing table < seq num in rreq.");
+          toOrigin.SetSeqNo (rreqHeader.GetOriginSeqno ());
+          toOrigin.SetAdvertisedHopCount (INFINITY2);
+          toOrigin.PathAllDelete ();
+          toOrigin.SetFlag (VALID);
+          Ptr<NetDevice> dev = m_ipv4->GetNetDevice (m_ipv4->GetInterfaceForAddress (receiver));
+          reversePath = toOrigin.PathInsert (dev, src, rreqHeader.GetHopCount ()+1, 
+                                              Time ((2 * m_netTraversalTime - 2 * hop * m_nodeTraversalTime)), 
+                                              rreqHeader.GetFirstHop (), 
+                                              m_ipv4->GetAddress (m_ipv4->GetInterfaceForAddress (receiver), 0));
+          toOrigin.SetLastHopCount (toOrigin.PathGetMaxHopCount ());           
         }
-      else if ((int32_t (rreqHeader.GetOriginSeqno ()) == int32_t (toOrigin.GetSeqNo ())) &&
-				 (toOrigin.GetAdvertisedHopCount () > rreqHeader.GetHopCount ()))
+        else if ((int32_t (rreqHeader.GetOriginSeqno ()) == int32_t (toOrigin.GetSeqNo ())) &&
+          (toOrigin.GetAdvertisedHopCount () > (rreqHeader.GetHopCount () + 1) ))
         {
+          NS_LOG_DEBUG("Receive RREQ : condition 2 - seq num same, but hop count in rreq is smaller");   
           if(toOrigin.GetFlag () == VALID)
+          {
+            if ((toOrigin.PathLookupDisjoint(src, rreqHeader.GetFirstHop (), reversePath))) 
+              {
+                NS_LOG_DEBUG("A same disjoint reverse route exist. Update the route.");
+                if (reversePath->GetHopCount () == (rreqHeader.GetHopCount ()+1))
+                  {
+                    reversePath->SetExpire (std::max(reversePath->GetExpire (), Time ((2 * m_netTraversalTime - 2 * hop * m_nodeTraversalTime))));
+                  }
+              }
+            else if (toOrigin.PathNewDisjoint(src, rreqHeader.GetFirstHop ()))
             {
-              if ((reversePath = toOrigin.PathLookupDisjoint(src, rreqHeader.GetFirstHop ()))) 
-                {
-                  if (reversePath->GetHopCount () == (rreqHeader.GetHopCount ()+1))
-                    {
-                      reversePath->SetExpire (std::max(reversePath->GetExpire (), Time ((2 * m_netTraversalTime - 2 * hop *                  
-                                                                                        m_nodeTraversalTime))));
-                    }
-                }
-      else if (toOrigin.PathNewDisjoint(src, rreqHeader.GetFirstHop ()))
-        {
-          if ( (toOrigin.GetNumberofPaths () < AOMDV_MAX_PATHS) &&
-            (((rreqHeader.GetHopCount ()+1) - toOrigin.PathGetMinHopCount ()) <= AOMDV_PRIM_ALT_PATH_LENGTH_DIFF))
-            {
-              reversePath = toOrigin.PathInsert (dev, src, rreqHeader.GetHopCount ()+1, 
-                                                  Time ((2 * m_netTraversalTime - 2 * hop * m_nodeTraversalTime)), 
-                                                  rreqHeader.GetFirstHop (), 
-                                                  m_ipv4->GetAddress (m_ipv4->GetInterfaceForAddress (receiver), 0));
-              toOrigin.SetLastHopCount (toOrigin.PathGetMaxHopCount ());
+              if ( (toOrigin.GetNumberofPaths () < AOMDV_MAX_PATHS) &&
+                (((rreqHeader.GetHopCount ()+1) - toOrigin.PathGetMinHopCount ()) <= AOMDV_PRIM_ALT_PATH_LENGTH_DIFF))
+              {
+                NS_LOG_DEBUG("Add new disjoint reverse route to " << origin << "to table.");
+                reversePath = toOrigin.PathInsert (dev, src, rreqHeader.GetHopCount ()+1, 
+                                                    Time ((2 * m_netTraversalTime - 2 * hop * m_nodeTraversalTime)), 
+                                                    rreqHeader.GetFirstHop (), 
+                                                    m_ipv4->GetAddress (m_ipv4->GetInterfaceForAddress (receiver), 0));
+                toOrigin.SetLastHopCount (toOrigin.PathGetMaxHopCount ());
+              }
+              // if (((rreqHeader.GetHopCount ()+1) - toOrigin.PathGetMinHopCount ()) > AOMDV_PRIM_ALT_PATH_LENGTH_DIFF) 
+              // {
+              //   return;
+              // }
             }
-          if (((rreqHeader.GetHopCount ()+1) - toOrigin.PathGetMinHopCount ()) > AOMDV_PRIM_ALT_PATH_LENGTH_DIFF) 
-            {
-		      return;
-	            }
-                }
-              else if ( (IsMyOwnAddress (rreqHeader.GetDst ())) && 
-			(((erp = toOrigin.PathLookupLastHop (rreqHeader.GetFirstHop ())) == NULL) ||
-			((rreqHeader.GetHopCount ()+1) > erp->GetHopCount ())))  
-                {
-			return;
-		}
-            }
-          else
-            {
-              return;
-            } 
+            // else if ( (IsMyOwnAddress (rreqHeader.GetDst ())) && 
+            //           (((erp = toOrigin.PathLookupLastHop (rreqHeader.GetFirstHop ())) == NULL) ||
+            //           ((rreqHeader.GetHopCount ()+1) > erp->GetHopCount ())))  
+            // {
+            //   return;
+            // }
+          }
+          // else
+          // {
+          //   return;
+          // } 
         }
+      }
     }
 
   RoutingTableEntry toNeighbor;
@@ -1374,7 +1381,7 @@ RoutingProtocol::RecvRequest (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address s
       newEntry.PathInsert (dev, src, 1, 
                            m_activeRouteTimeout, src, 
                            m_ipv4->GetAddress (m_ipv4->GetInterfaceForAddress (receiver), 0));
-      m_routingTable.AddRoute (newEntry); //! error, the route disappear after this funtion
+      m_routingTable.AddRoute (newEntry);
       // NS_LOG_DEBUG("after insert the route to neighbor");
       // newEntry.PrintPaths();
     }
@@ -1500,6 +1507,7 @@ RoutingProtocol::RecvRequest (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address s
     }   
   if (killRequestPropagation)
     {
+      NS_LOG_DEBUG("Drop RREQ due to duplicate.");
       return;
     }
   else
@@ -1511,8 +1519,7 @@ RoutingProtocol::RecvRequest (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address s
         }
 
       // m_routingTable.LookupRoute (origin, toOrigin); // Jonathan - Just for filling the toOrigin
-      rreqHeader.SetHopCount (toOrigin.GetAdvertisedHopCount ());
-      NS_LOG_DEBUG("Advertised Hop Count : " << toOrigin.GetAdvertisedHopCount ());
+      rreqHeader.SetHopCount (rreqHeader.GetHopCount()+1);
       #ifdef AOMDV_NODE_DISJOINT_PATHS
       rreqHeader.SetFirstHop (rreqHeader.GetFirstHop()); // Jonathan
       NS_LOG_DEBUG("[first hop] : " << rreqHeader.GetFirstHop ());
@@ -1564,6 +1571,7 @@ RoutingProtocol::SendReply (RreqHeader const & rreqHeader, RoutingTableEntry & t
   packet->AddHeader (tHeader);
   Ptr<Socket> socket = FindSocketWithInterfaceAddress (toOrigin.PathFind ()->GetInterface ());
   NS_ASSERT (socket);
+  NS_LOG_DEBUG("Send reply to " << toOrigin.PathFind ()->GetNextHop () );
   socket->SendTo (packet, 0, InetSocketAddress (toOrigin.PathFind ()->GetNextHop (), AOMDV_PORT));
 }
 
@@ -1615,7 +1623,7 @@ RoutingProtocol::SendReplyByIntermediateNode (RoutingTableEntry & toDst, Routing
       packetToDst->AddHeader (type);
       Ptr<Socket> socket = FindSocketWithInterfaceAddress (toDst.PathFind ()->GetInterface ());
       NS_ASSERT (socket);
-      NS_LOG_LOGIC ("Send gratuitous RREP " << packet->GetUid () << " Destination: " << toDst.PathFind ()->GetNextHop () );
+      NS_LOG_LOGIC ("Send gratuitous RREP " << packet->GetUid ()  << " to " << toDst.PathFind ()->GetNextHop ());
       socket->SendTo (packetToDst, 0, InetSocketAddress (toDst.PathFind ()->GetNextHop (), AOMDV_PORT));
     }
 }
@@ -1647,13 +1655,13 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
   Ipv4Address dst = rrepHeader.GetDst ();
   NS_LOG_LOGIC ("RREP destination " << dst << " RREP origin " << rrepHeader.GetOrigin ());
 
-  if (IsMyOwnAddress (dst))
-    {
-      return;
-    }
+  // receive the rrep of rreq to myself: useless, just drop it
+  // if (IsMyOwnAddress (dst))
+  //   {
+  //     return;
+  //   }
 
   uint8_t hop = rrepHeader.GetHopCount () + 1;
-  //rrepHeader.SetHopCount (hop);
 
   // If RREP is Hello message
   if (dst == rrepHeader.GetOrigin ())
@@ -1682,7 +1690,7 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
   RoutingTableEntry newEntry (/*dst=*/ dst, /*validSeqNo=*/ true, /*seqno=*/ rrepHeader.GetDstSeqno (), 
                               /*lifeTime=*/ rrepHeader.GetLifeTime ());
   RoutingTableEntry toDst;
-  if (m_routingTable.LookupRoute (dst, toDst))
+  if (m_routingTable.LookupRoute (dst, toDst) && m_routingTable.LookupValidRoute (dst, toDst))
     {
       /*
        * The existing entry is updated only in the following circumstances:
@@ -1699,7 +1707,7 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
       */
       if ((int32_t (rrepHeader.GetDstSeqno ()) - int32_t (toDst.GetSeqNo ())) > 0)
         {
-          NS_LOG_DEBUG("Condition 1 in recvreply");
+          NS_LOG_DEBUG("Receive RREQ : condition 1 - seq num in rrep is larger.");
           toDst.SetSeqNo (rrepHeader.GetDstSeqno ());
           toDst.SetAdvertisedHopCount (INFINITY2);
           toDst.PathAllDelete ();
@@ -1719,7 +1727,7 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
                && (toDst.GetAdvertisedHopCount () > rrepHeader.GetHopCount ()))
         {
           NS_LOG_DEBUG("RREP Hop count " << rrepHeader.GetHopCount() << " Origin " << rrepHeader.GetOrigin () << " First hop " << rrepHeader.GetFirstHop ());
-          if (forwardPath!=NULL && forwardPath == toDst.PathLookupDisjoint (rrepHeader.GetOrigin (),rrepHeader.GetFirstHop ())) // Jonathan add first condition
+          if (toDst.PathLookupDisjoint (rrepHeader.GetOrigin (),rrepHeader.GetFirstHop (), forwardPath))
             {
               NS_LOG_DEBUG("------here0-------");
               if (forwardPath->GetHopCount () == hop)
@@ -1738,7 +1746,7 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
                                               Simulator::Now() + rrepHeader.GetLifeTime (), 
                                               rrepHeader.GetFirstHop (),
                                               m_ipv4->GetAddress (m_ipv4->GetInterfaceForAddress (receiver), 0));
-	      // CHANGE
+	        // CHANGE
               toDst.SetLastHopCount (toDst.PathGetMaxHopCount ());
             }
           else
@@ -1763,7 +1771,8 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
                            Time ((2 * m_netTraversalTime - 2 * hop * m_nodeTraversalTime)), 
                            rrepHeader.GetFirstHop (), 
                            m_ipv4->GetAddress (m_ipv4->GetInterfaceForAddress (receiver), 0));
-      m_routingTable.AddRoute (newEntry);    
+      m_routingTable.AddRoute (newEntry);
+      newEntry.PrintPaths();
     }
   // Acknowledge receipt of the RREP by sending a RREP-ACK message back
   if (rrepHeader.GetAckRequired ())
@@ -1787,86 +1796,99 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
 
   RoutingTableEntry toOrigin;
   uint32_t id = rrepHeader.GetRequestID ();
-  b = m_rreqIdCache.GetId (dst, id);
+  // b = m_rreqIdCache.GetId (dst, id);
   #ifdef AOMDV_NODE_DISJOINT_PATHS
+  // if (!m_routingTable.LookupRoute (rrepHeader.GetOrigin (), toOrigin) || (toOrigin.GetFlag () != VALID)
+  //     || (b == NULL) || (b->count))
+  //   {
+  //     return; // Impossible! drop.
+  //   }
+
+  // b->count = 1;
+  // TODO: Send RREP only along with the reverse route that have not used before
+  m_routingTable.LookupRoute (dst, toDst); // fill the toDst with new route to destination justed added 
   NS_LOG_DEBUG("look up route to origin for forwarding rrep along reverse path.");
-  if (!m_routingTable.LookupRoute (rrepHeader.GetOrigin (), toOrigin) || (toOrigin.GetFlag () != VALID)
-      || (b == NULL) || (b->count))
-    {
-      return; // Impossible! drop.
-    }
+  if(m_routingTable.LookupRoute (rrepHeader.GetOrigin (), toOrigin) )
+  {
+    RoutingTableEntry::Path *reversePath = toOrigin.PathFind ();
 
-  b->count = 1;
-  RoutingTableEntry::Path *reversePath = toOrigin.PathFind ();
-
-  if (toDst.GetAdvertisedHopCount () == INFINITY2)
+    if (toDst.GetAdvertisedHopCount () == INFINITY2)
     {
       toDst.SetAdvertisedHopCount (toDst.PathGetMaxHopCount ());
     }
-  rrepHeader.SetHopCount (toDst.GetAdvertisedHopCount ());
-  rrepHeader.SetFirstHop (toDst.PathFind ()->GetLastHop ());
-  reversePath->SetExpire (Simulator::Now() + m_activeRouteTimeout);
-  toDst.SetError (true);
-  #endif // AOMDV_NODE_DISJOINT_PATHS
 
-  #ifdef AOMDV_LINK_DISJOINT_PATHS
-  /* Drop the RREP packet if we do not have a path back to the source, 
-      or the route is marked as down, or if we never received the original RREQ. */
-  if (!m_routingTable.LookupRoute (rrepHeader.GetOrigin (), toOrigin) || (toOrigin.GetFlag () != VALID)
-      || (b == NULL))
-    {
-      return; // Impossible! drop.
-    }
-  /* Make sure we don't answer along the same path twice in response 
-      to a certain RREQ. Try to find an unused (reverse) path to forward the RREP. */
-  RoutingTableEntry::Path* reversePath = NULL;
-  RoutingTableEntry::Path *firstPath = toDst.PathFind (); // Get first path for RREQ destination
-  /* Make sure we don't answer with the same forward path twice in response 
-  to a certain RREQ (received more than once). E.g. "middle node" in "double diamond". */
-  std::vector<Path> paths;
-  toDst.GetPaths (paths);
-  AOMDVRoute rt;
-  for (std::vector<Path>::const_iterator i = paths.begin (); i!= paths.end (); ++i)
-    {
-      if (!(b->ReversePathLookup (i->GetNextHop (), & rt, i->GetLastHop ())))
-        {
-          reversePath = i;
-          break;
-        }
-    }
+    rrepHeader.SetHopCount (toDst.GetAdvertisedHopCount ());
+    rrepHeader.SetFirstHop (toDst.PathFind ()->GetLastHop ());
+    reversePath->SetExpire (Simulator::Now() + m_activeRouteTimeout);
+    toDst.SetError (true);
+    #endif // AOMDV_NODE_DISJOINT_PATHS
 
-  /* If an unused reverse path is found and the forward path (for 
-     this RREP) has not already been replied - forward the RREP. */
-  if (reversePath && b->ForwardPathLookup (forwardPath->GetNextHop (), &rt, forwardPath->GetLastHop () == NULL)
-    {
-      if(forwardPath->GetNextHop () == rrepHeader.GetOrigin () && forwardPath->GetLastHop () == rrepHeader.GetFirstHop ())
-        {
-          b->ReversePathInsert (reversePath->GetNextHop (), reversePath->GetLastHop ());
-          b->ForwardPathInsert (forwardPath->GetNextHop (), forwardPath->GetLastHop ());
-          // route advertisement
-          if (toDst.GetAdvertisedHopCount () == INFINITY2)
-            {
-              toDst.SetAdvertisedHopCount (toDst.PathGetMaxHopCount ());
-            }
-          rrepHeader.SetHopCount (toDst.GetAdvertisedHopCount);
-          reversePath->SetExpire (Simulator::Now() + m_activeRouteTimeout);  
-          // CHANGE
-          toDst.SetError (true);
-	}
+    #ifdef AOMDV_LINK_DISJOINT_PATHS
+    /* Drop the RREP packet if we do not have a path back to the source, 
+        or the route is marked as down, or if we never received the original RREQ. */
+    if (!m_routingTable.LookupRoute (rrepHeader.GetOrigin (), toOrigin) || (toOrigin.GetFlag () != VALID)
+        || (b == NULL))
+      {
+        return; // Impossible! drop.
+      }
+    /* Make sure we don't answer along the same path twice in response 
+        to a certain RREQ. Try to find an unused (reverse) path to forward the RREP. */
+    RoutingTableEntry::Path* reversePath = NULL;
+    RoutingTableEntry::Path *firstPath = toDst.PathFind (); // Get first path for RREQ destination
+    /* Make sure we don't answer with the same forward path twice in response 
+    to a certain RREQ (received more than once). E.g. "middle node" in "double diamond". */
+    std::vector<Path> paths;
+    toDst.GetPaths (paths);
+    AOMDVRoute rt;
+    for (std::vector<Path>::const_iterator i = paths.begin (); i!= paths.end (); ++i)
+      {
+        if (!(b->ReversePathLookup (i->GetNextHop (), & rt, i->GetLastHop ())))
+          {
+            reversePath = i;
+            break;
+          }
+      }
+
+    /* If an unused reverse path is found and the forward path (for 
+      this RREP) has not already been replied - forward the RREP. */
+    if (reversePath && b->ForwardPathLookup (forwardPath->GetNextHop (), &rt, forwardPath->GetLastHop () == NULL)
+      {
+        if(forwardPath->GetNextHop () == rrepHeader.GetOrigin () && forwardPath->GetLastHop () == rrepHeader.GetFirstHop ())
+          {
+            b->ReversePathInsert (reversePath->GetNextHop (), reversePath->GetLastHop ());
+            b->ForwardPathInsert (forwardPath->GetNextHop (), forwardPath->GetLastHop ());
+            // route advertisement
+            if (toDst.GetAdvertisedHopCount () == INFINITY2)
+              {
+                toDst.SetAdvertisedHopCount (toDst.PathGetMaxHopCount ());
+              }
+            rrepHeader.SetHopCount (toDst.GetAdvertisedHopCount);
+            reversePath->SetExpire (Simulator::Now() + m_activeRouteTimeout);  
+            // CHANGE
+            toDst.SetError (true);
     }
+      }
+    else
+      {
+        return;
+      }
+    #endif // AOMDV_LINK_DISJOINT_PATHS
+
+    Ptr<Packet> packet = Create<Packet> ();
+    packet->AddHeader (rrepHeader);
+    TypeHeader tHeader (AOMDVTYPE_RREP);
+    packet->AddHeader (tHeader);
+
+    Ptr<Socket> socket = FindSocketWithInterfaceAddress (toOrigin.PathFind ()->GetInterface ());
+    NS_ASSERT (socket);
+    NS_LOG_DEBUG("Send RREP to " << toOrigin.PathFind ()->GetNextHop ());
+    socket->SendTo (packet, 0, InetSocketAddress (toOrigin.PathFind ()->GetNextHop (), AOMDV_PORT));
+  }
   else
-    {
-      return;
-    }
-  #endif // AOMDV_LINK_DISJOINT_PATHS
-
-  Ptr<Packet> packet = Create<Packet> ();
-  packet->AddHeader (rrepHeader);
-  TypeHeader tHeader (AOMDVTYPE_RREP);
-  packet->AddHeader (tHeader);
-  Ptr<Socket> socket = FindSocketWithInterfaceAddress (toOrigin.PathFind ()->GetInterface ());
-  NS_ASSERT (socket);
-  socket->SendTo (packet, 0, InetSocketAddress (toOrigin.PathFind ()->GetNextHop (), AOMDV_PORT));
+  {
+    NS_LOG_DEBUG("No reverse path to send RREP.");
+  }
+  
 }
 
 void
