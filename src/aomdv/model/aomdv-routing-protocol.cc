@@ -1655,12 +1655,6 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
   Ipv4Address dst = rrepHeader.GetDst ();
   NS_LOG_LOGIC ("RREP destination " << dst << " RREP origin " << rrepHeader.GetOrigin ());
 
-  // receive the rrep of rreq to myself: useless, just drop it
-  // if (IsMyOwnAddress (dst))
-  //   {
-  //     return;
-  //   }
-
   uint8_t hop = rrepHeader.GetHopCount () + 1;
 
   // If RREP is Hello message
@@ -1669,8 +1663,6 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
       ProcessHello (rrepHeader, receiver);
       return;
     }
-
-  NS_LOG_DEBUG("Receive RREP to " << rrepHeader.GetOrigin () << " for searching route to " << rrepHeader.GetDst ());
 
   /*
    * If the route table entry to the (rreq) destination is created or updated, then the following actions occur:
@@ -1683,9 +1675,6 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
    * -  and the destination sequence number is the Destination Sequence Number in the RREP message.
    */
   Ptr<NetDevice> dev = m_ipv4->GetNetDevice (m_ipv4->GetInterfaceForAddress (receiver));
-  //RoutingTableEntry newEntry (/*device=*/ dev, /*dst=*/ dst, /*validSeqNo=*/ true, /*seqno=*/ rrepHeader.GetDstSeqno (),
-  //                                        /*iface=*/ m_ipv4->GetAddress (m_ipv4->GetInterfaceForAddress (receiver), 0),/*hop=*/ hop,
-  //                                        /*nextHop=*/ sender, /*lifeTime=*/ rrepHeader.GetLifeTime ());
 
   RoutingTableEntry newEntry (/*dst=*/ dst, /*validSeqNo=*/ true, /*seqno=*/ rrepHeader.GetDstSeqno (), 
                               /*lifeTime=*/ rrepHeader.GetLifeTime ());
@@ -1702,7 +1691,7 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
       //   }
 
       /*
-       * (ii)the Destination Sequence Number in the RREP is greater than the node's copy of the destination sequence number
+       * (iii)the Destination Sequence Number in the RREP is greater than the node's copy of the destination sequence number
        * and the known value is valid,
       */
       if ((int32_t (rrepHeader.GetDstSeqno ()) - int32_t (toDst.GetSeqNo ())) > 0)
@@ -1720,16 +1709,16 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
           toDst.SetLastHopCount (toDst.PathGetMaxHopCount ());
         }
 
-      /* If the sequence number in the RREP is the same as for route entry but 
-      with a smaller hop count - try to insert new forward path to (RREQ) dest. */
-      // (iii) the sequence numbers are the same, but the route is marked as inactive.
+      /* 
+       *(iii) If the sequence number in the RREP is the same as for route entry but 
+       *with a smaller hop count - try to insert new forward path to (RREQ) dest.
+      */
       else if ((rrepHeader.GetDstSeqno () == toDst.GetSeqNo ()) && (toDst.GetFlag () == VALID)
                && (toDst.GetAdvertisedHopCount () > rrepHeader.GetHopCount ()))
         {
           NS_LOG_DEBUG("RREP Hop count " << (int)rrepHeader.GetHopCount() << " Origin " << rrepHeader.GetOrigin () << " First hop " << rrepHeader.GetFirstHop ());
           if (toDst.PathLookupDisjoint (rrepHeader.GetOrigin (),rrepHeader.GetFirstHop (), forwardPath))
             {
-              NS_LOG_DEBUG("------here0-------");
               if (forwardPath->GetHopCount () == hop)
                 {
                   forwardPath->SetExpire (std::max (forwardPath->GetExpire (), Simulator::Now() + rrepHeader.GetLifeTime ()));
@@ -1741,26 +1730,21 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
                     && (hop - toDst.PathGetMinHopCount () <= AOMDV_PRIM_ALT_PATH_LENGTH_DIFF))
             {
               /* Insert forward path to RREQ destination. */
-              NS_LOG_DEBUG("------here1-------");
               forwardPath = toDst.PathInsert (dev, sender, hop, 
                                               Simulator::Now() + rrepHeader.GetLifeTime (), 
                                               rrepHeader.GetFirstHop (),
                                               m_ipv4->GetAddress (m_ipv4->GetInterfaceForAddress (receiver), 0));
-	        // CHANGE
+	            // CHANGE
               toDst.SetLastHopCount (toDst.PathGetMaxHopCount ());
             }
           else
-            {
-              NS_LOG_DEBUG("------here2-------");
-              return;
-            }
-       
+            return; // Can not construct a disjoint loop-free forward path, drop RREP
         }
-      else          
-        {
-          return;
-        }
-   
+      /*
+       * Can not construct a disjoint loop-free forward path, drop RREP
+      */
+      else
+        return;
     }
   else
     {
@@ -1805,7 +1789,7 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
   //   }
 
   // b->count = 1;
-  // TODO: Send RREP only along with the reverse route that have not used before
+
   NS_LOG_DEBUG("look up route to origin for rrep along reverse path.");
   /* Drop the RREP packet if we do not have a path back to the source, 
       or the route is marked as down, or if we never received the original RREQ. */
@@ -1827,12 +1811,13 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
 
   AOMDVRoute reverseRoute;
 
+  // Find an unused reverse route
   for (std::vector<RoutingTableEntry::Path>::iterator i = paths.begin (); i!= paths.end (); ++i)
     {
       if (!(b->ReversePathLookup (i->GetNextHop (), reverseRoute, i->GetLastHop ())))
         {
           reversePath = &(*i);
-          NS_LOG_DEBUG("NextHop: " << reversePath->GetNextHop() << " Destination: " << reversePath->GetRoute()->GetDestination());
+          NS_LOG_DEBUG("Reverse Route Found. NextHop: " << reversePath->GetNextHop() << " Destination: " << reversePath->GetRoute()->GetDestination());
           break;
         }
     }
@@ -1869,8 +1854,6 @@ RoutingProtocol::RecvReply (Ptr<Packet> p, Ipv4Address receiver, Ipv4Address sen
   NS_LOG_DEBUG("Send RREP to " << reversePath->GetNextHop ());
   socket->SendTo (packet, 0, InetSocketAddress (reversePath->GetNextHop (), AOMDV_PORT));
 
-  //--------------------------------//
-  
 }
 
 void

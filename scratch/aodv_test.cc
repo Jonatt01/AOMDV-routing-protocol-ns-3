@@ -48,7 +48,7 @@ int main (int argc, char *argv[])
   uint32_t numFlows = 1;  // must smaller than numNodes/2
   std::string rtslimit = "0";  //(Default = 1000000)
   double simulationTime = 50.0;
-  bool printRoutingTables = true;
+  bool printRoutingTables = false;
   CommandLine cmd;
 
   cmd.AddValue ("phyMode", "Wifi Phy mode", phyMode);
