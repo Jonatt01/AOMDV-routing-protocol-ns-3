@@ -471,22 +471,68 @@ RoutingTableEntry::GetPrecursors (std::vector<Ipv4Address> & prec) const
 void
 RoutingTableEntry::GetPaths (std::vector<Path> & paths) const
 {
-  // NS_LOG_FUNCTION (this);
+  NS_LOG_FUNCTION (this);
   if (PathEmpty ())
     return;
-  for (std::vector<Path>::const_iterator i = m_pathList.begin (); i
-       != m_pathList.end (); ++i)
+  for (std::vector<Path>::const_iterator i = m_pathList.begin (); i != m_pathList.end (); ++i)
+  {
+    bool result = true;
+    for (std::vector<Path>::const_iterator j = paths.begin (); j
+          != paths.end (); ++j)
+      {
+        if (*j == *i)
+          result = false;
+      }
+    if (result)
+      paths.push_back (*i);
+  }
+}
+
+bool
+RoutingTableEntry::FindPathForReply (Ipv4Address origin, uint32_t id, Path & path)
+{
+  std::pair<Ipv4Address, uint32_t> key(origin, id);
+  std::vector<Path> usedroutes = m_usedRoute.find(key)->second;
+  Ipv4Address nh, lh;
+
+  for (std::vector<Path>::const_iterator i = m_pathList.begin(); i != m_pathList.end(); ++i) 
+  {
+    nh = i->GetNextHop();
+    lh = i->GetLastHop();
+
+    for(auto i:usedroutes)
     {
-      bool result = true;
-      for (std::vector<Path>::const_iterator j = paths.begin (); j
-           != paths.end (); ++j)
-        {
-          if (*j == *i)
-            result = false;
-        }
-      if (result)
-        paths.push_back (*i);
+      if(nh != i.GetNextHop() || lh != i.GetLastHop())
+      {
+        path = i;
+        AddUsedRoute(origin, id, path);
+        return true;
+      }
     }
+    return false;
+  }
+}
+
+void
+RoutingTableEntry::AddUsedRoute (Ipv4Address origin, uint32_t id, Path & path)
+{
+  // std::pair<Ipv4Address, uint32_t> key(origin, id);
+  m_usedRoute[ std::make_pair(origin, id) ].push_back(path);
+}
+
+void
+RoutingTableEntry::PrintUsedRoute ()
+{
+  for(auto it = m_usedRoute.cbegin(); it != m_usedRoute.cend(); ++it)
+  {
+    NS_LOG_DEBUG(it->first.first << ", " << it->first.second);
+    NS_LOG_DEBUG("**************************************************");
+    for(auto i:it->second)
+    {
+      NS_LOG_DEBUG("NextHop: " << i.GetNextHop() << "LastHop: " << i.GetLastHop());
+    }
+    NS_LOG_DEBUG("**************************************************");
+  }
 }
 
 void

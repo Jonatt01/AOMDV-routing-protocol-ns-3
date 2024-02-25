@@ -98,7 +98,7 @@ IdCache::UniqueId::ReversePathLookup (Ipv4Address nextHop, AOMDVRoute & rt, Ipv4
     {
       if ( ( i->GetNextHop () == nextHop) && ( i->GetLastHop () == lastHop) )
         {
-	  rt = *i;
+	        rt = *i;
           return true;     
         }
     }
@@ -119,7 +119,7 @@ IdCache::UniqueId::ForwardPathLookup (Ipv4Address nextHop, AOMDVRoute & rt, Ipv4
     {
       if ( ( i->GetNextHop () == nextHop) && ( i->GetLastHop () == lastHop) )
         {
-	  rt = *i;
+	        rt = *i;
           return true;      
         }
     }

@@ -173,8 +173,29 @@ public:
   /// Mark entry as "down" (i.e. disable it)
   void Invalidate (Time badLinkLifetime);
 
-  //AOMDV Code
+  // copy the m_pathList to paths
   void GetPaths (std::vector<Path> & paths) const; 
+
+  /**
+  * Get a valid reverse path for RREP
+  * \param origin originator address of RREP
+  * \param id RREP ID, which is the same as the RREQ
+  * \param path the path we found, if failed then path is nullpath
+  * \return true on success
+  */
+  bool FindPathForReply (Ipv4Address origin, uint32_t id, Path & path);
+
+  /**
+   * Insert the path to m_usedRoute after the reverse route is used for sending a RREP with this route discovery
+   * \param origin originator address of RREP
+   * \param id RREP ID, which is the same as the  RREQ
+   * \param path the reverse path
+   */
+  void AddUsedRoute (Ipv4Address origin, uint32_t id, Path & path);
+
+  void PrintUsedRoute ();
+
+
   ///\name Fields
   //\{
   Ipv4Address GetDestination () const { return m_dst; }
@@ -249,6 +270,8 @@ private:
   bool m_blackListState;
   /// Time for which the node is put into the blacklist
   Time m_blackListTimeout;
+  /// < <originator address, rreq id>, path>
+  std::map<std::pair<Ipv4Address, uint32_t>, std::vector<Path>> m_usedRoute;
 
   //AOMDV
   uint16_t  m_advertisedHopCount;
