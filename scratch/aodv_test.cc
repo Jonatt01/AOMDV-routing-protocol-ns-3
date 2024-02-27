@@ -25,15 +25,37 @@ NS_LOG_COMPONENT_DEFINE ("AomdvTesting");
 
 using namespace ns3;
 
+void TxCallBack(
+    std::string context,
+    Ptr<const Packet> packet)
+{
+    NS_LOG_UNCOND(
+        "+" <<
+        Simulator::Now().GetSeconds() << " " <<
+        packet->GetSize() << " " <<
+        context);
+}
+
+void RxCallBack(
+    std::string context,
+    Ptr<const Packet> packet, Address from)
+{
+    NS_LOG_UNCOND(
+        "+" <<
+        Simulator::Now().GetSeconds() << " " <<
+        packet->GetSize() << " " <<
+        context);
+}
 
 int main (int argc, char *argv[])
 {
   // LogComponentEnableAll(LogLevel(LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
-  LogComponentEnable("AomdvRoutingTable", LogLevel(LOG_LEVEL_ALL));
+  // LogComponentEnable("AomdvRoutingTable", LogLevel(LOG_LEVEL_ALL));
   // LogComponentEnable("DcaTxop", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
-  LogComponentEnable("AomdvRoutingProtocol", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
+  // LogComponentEnable("AomdvRoutingProtocol", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
+  // LogComponentEnable("Ipv4L3Protocol", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE)); // Ip layer
   // LogComponentEnable("MacLow", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
-  // LogComponentEnable("AomdvTesting", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
+  LogComponentEnable("AomdvTesting", LogLevel(LOG_LEVEL_ALL | LOG_PREFIX_TIME | LOG_PREFIX_FUNC | LOG_PREFIX_NODE));
   
   
 
@@ -45,7 +67,7 @@ int main (int argc, char *argv[])
   double interval = 0.01; // seconds(Default = 0.001)
   uint32_t packetSize = 100; // bytes(Default = 600)
   uint32_t numPackets = 1000;//1 vs 10000
-  uint32_t numFlows = 1;  // must smaller than numNodes/2
+  uint32_t numFlows = 2;  // must smaller than numNodes/2
   std::string rtslimit = "0";  //(Default = 1000000)
   double simulationTime = 50.0;
   bool printRoutingTables = false;
@@ -74,6 +96,8 @@ int main (int argc, char *argv[])
   WifiHelper wifi;
 
   YansWifiPhyHelper wifiPhy =  YansWifiPhyHelper::Default ();
+  
+  // wifiPhy.SetPcapDataLinkType (YansWifiPhyHelper::DLT_IEEE802_11_RADIO); 
 
   wifiPhy.SetErrorRateModel("ns3::YansErrorRateModel");  
   wifiPhy.Set("CcaMode1Threshold", DoubleValue(-82.0));
@@ -277,9 +301,18 @@ int main (int argc, char *argv[])
   FlowMonitorHelper flowmon;
   Ptr<FlowMonitor> monitor = flowmon.InstallAll();
 
-  // wifiPhy.EnablePcap ("lab-4-solved", devices);
+  // wifiPhy.EnablePcap ("lab-4", devices);
   Simulator::Stop (Seconds(12));
   // Simulator::Stop (Seconds (simulationTime));
+
+  Config::Connect(
+    "/NodeList/*/ApplicationList/*/$ns3::UdpClient/Tx",
+    MakeCallback(&TxCallBack));
+
+  Config::Connect(
+    "/NodeList/*/ApplicationList/*/$ns3::UdpServer/Rx",
+    MakeCallback(&RxCallBack));
+
   Simulator::Run ();
 
   // Show Statistic Information
