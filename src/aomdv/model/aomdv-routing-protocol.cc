@@ -653,17 +653,6 @@ RoutingProtocol::NotifyInterfaceUp (uint32_t i)
   RoutingTableEntry rt (/*dst=*/ iface.GetBroadcast (), /*validSeqNo=*/ true, /*seqno=*/ 0, 
                               /*lifeTime=*/ Simulator::GetMaximumSimulationTime ());
   // m_routingTable.AddRoute (rt);
-  ///*-------------------Jonathan--------------------------*///
-  // NS_LOG_DEBUG("m_dst : " << rt.GetDestination());
-          
-  // RoutingTableEntry::Path path(/*device=*/ dev,/*dest=*/ rt.GetDestination(),/*nextHop=*/ iface.GetBroadcast (),
-  //                               /*hop=*/1, /*expireTime=*/ Simulator::GetMaximumSimulationTime (),
-  //                               /*lastHop=*/iface.GetBroadcast (),/*iface=*/ iface);
-  // if(!rt.PathInsertTest(path)) NS_LOG_DEBUG("Failed to insert path...");
-  // NS_LOG_DEBUG("destination in route: " << rt.PathFind()->GetRoute()->GetDestination());
-  
-  // rt.PrintPaths();
-  ///*---------------------------------------------*///
   rt.PathInsert (/*device=*/ dev, /*nextHop=*/ iface.GetBroadcast (), /*hop=*/ 1, 
                  /*expireTime=*/ Simulator::GetMaximumSimulationTime (), 
                  /*lastHop=*/ iface.GetBroadcast (), 

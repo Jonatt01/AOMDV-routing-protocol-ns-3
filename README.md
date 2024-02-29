@@ -151,16 +151,58 @@ n0   n1   n2   n3   n4
 ```
 The layout is affected by the parameters given to GridPositionAllocator; by default, GridWidth is 5 and numNodes is 25.
 
-Flow 1: node 1 -> node 14 (10.1.1.2 -> 10.1.1.15) 
+Flow 1: node 1 -> node 14 (10.1.1.2 -> 10.1.1.15)
+Flow 2: node 11 -> node 12 (10.1.1.12 -> 10.1.1.13)
 
 The output is as below
 ```
+AomdvTesting:main(): RtsCtsThreshold : 0
+0s -1 AomdvTesting:main(): Energy detection threshold : -79.0
+Position have been saved to: ../Python-Tools/node_position.csv
+0s -1 AomdvTesting:main(): Client : 68.8131 ~ 73.225
+0s -1 AomdvTesting:main(): Create the flow : node 1 send to node 14
+sinkAddress : 10.1.1.15
+0s -1 AomdvTesting:main(): Client : 64.8169 ~ 76.9397
+0s -1 AomdvTesting:main(): Create the flow : node 11 send to node 12
+sinkAddress : 10.1.1.13
++5 100 /NodeList/1/ApplicationList/0/$ns3::UdpClient/Tx
++5 100 /NodeList/11/ApplicationList/0/$ns3::UdpClient/Tx
++5.01572 100 /NodeList/12/ApplicationList/0/$ns3::UdpServer/Rx
++5.18949 100 /NodeList/14/ApplicationList/0/$ns3::UdpServer/Rx
++5.5 100 /NodeList/1/ApplicationList/0/$ns3::UdpClient/Tx
++5.5 100 /NodeList/11/ApplicationList/0/$ns3::UdpClient/Tx
++5.5034 100 /NodeList/12/ApplicationList/0/$ns3::UdpServer/Rx
++5.52291 100 /NodeList/14/ApplicationList/0/$ns3::UdpServer/Rx
++6 100 /NodeList/1/ApplicationList/0/$ns3::UdpClient/Tx
++6 100 /NodeList/11/ApplicationList/0/$ns3::UdpClient/Tx
++6.00955 100 /NodeList/12/ApplicationList/0/$ns3::UdpServer/Rx
++6.02658 100 /NodeList/14/ApplicationList/0/$ns3::UdpServer/Rx
++6.5 100 /NodeList/1/ApplicationList/0/$ns3::UdpClient/Tx
++6.5 100 /NodeList/11/ApplicationList/0/$ns3::UdpClient/Tx
++6.5034 100 /NodeList/12/ApplicationList/0/$ns3::UdpServer/Rx
++6.52291 100 /NodeList/14/ApplicationList/0/$ns3::UdpServer/Rx
++7 100 /NodeList/1/ApplicationList/0/$ns3::UdpClient/Tx
++7 100 /NodeList/11/ApplicationList/0/$ns3::UdpClient/Tx
++7.0034 100 /NodeList/12/ApplicationList/0/$ns3::UdpServer/Rx
++7.02554 100 /NodeList/14/ApplicationList/0/$ns3::UdpServer/Rx
++7.5 100 /NodeList/1/ApplicationList/0/$ns3::UdpClient/Tx
++7.5 100 /NodeList/11/ApplicationList/0/$ns3::UdpClient/Tx
++7.5034 100 /NodeList/12/ApplicationList/0/$ns3::UdpServer/Rx
++7.52291 100 /NodeList/14/ApplicationList/0/$ns3::UdpServer/Rx
 ---------------------------Flow 1 statistic result---------------------------
 Src Addr 10.1.1.2 Dest Addr 10.1.1.15
 Tx packets : 6
 Rx packets : 6
 Avg_PDR : 1
+Avg_SystemThroughput : 2.37821 [Kbps]
+Avg_e2eDelay : 0.0517219 [Sec]
+Packet loss ratio : 0 % 
+---------------------------Flow 2 statistic result---------------------------
+Src Addr 10.1.1.12 Dest Addr 10.1.1.13
+Tx packets : 6
+Rx packets : 6
+Avg_PDR : 1
 Avg_SystemThroughput : 2.39674 [Kbps]
-Avg_e2eDelay : 0.00670584 [Sec]
+Avg_e2eDelay : 0.00647753 [Sec]
 Packet loss ratio : 0 % 
 ```

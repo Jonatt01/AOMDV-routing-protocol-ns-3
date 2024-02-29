@@ -5,6 +5,11 @@
     "file": "../src/network/utils/radiotap-header.cc"
   }, 
   {
+    "directory": "/home/blue/DBTMA_ECA_H_F/IEEE-802.11ah-ns-3/build", 
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_GSL=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../scratch/density_blue_200nodes.cc -c -o /home/blue/DBTMA_ECA_H_F/IEEE-802.11ah-ns-3/build/scratch/density_blue_200nodes.cc.3.o", 
+    "file": "../scratch/density_blue_200nodes.cc"
+  }, 
+  {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
     "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/model/a2-a4-rsrq-handover-algorithm.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/model/a2-a4-rsrq-handover-algorithm.cc.1.o", 
     "file": "../src/lte/model/a2-a4-rsrq-handover-algorithm.cc"
@@ -336,6 +341,11 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/model/pf-ff-mac-scheduler.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/model/pf-ff-mac-scheduler.cc.1.o", 
+    "file": "../src/lte/model/pf-ff-mac-scheduler.cc"
+  }, 
+  {
+    "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
     "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wimax/model/ss-net-device.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wimax/model/ss-net-device.cc.1.o", 
     "file": "../src/wimax/model/ss-net-device.cc"
   }, 
@@ -576,8 +586,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wifi/model/ctrl-headers.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wifi/model/ctrl-headers.cc.1.o", 
-    "file": "../src/wifi/model/ctrl-headers.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/network/utils/packet-socket-factory.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/network/utils/packet-socket-factory.cc.1.o", 
+    "file": "../src/network/utils/packet-socket-factory.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -623,6 +633,11 @@
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
     "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wimax/model/burst-profile-manager.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wimax/model/burst-profile-manager.cc.1.o", 
     "file": "../src/wimax/model/burst-profile-manager.cc"
+  }, 
+  {
+    "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/helper/point-to-point-epc-helper.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/helper/point-to-point-epc-helper.cc.1.o", 
+    "file": "../src/lte/helper/point-to-point-epc-helper.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -806,11 +821,6 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/mesh/model/dot11s/airtime-metric.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/mesh/model/dot11s/airtime-metric.cc.1.o", 
-    "file": "../src/mesh/model/dot11s/airtime-metric.cc"
-  }, 
-  {
-    "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
     "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/internet/model/tcp-socket-factory.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/internet/model/tcp-socket-factory.cc.1.o", 
     "file": "../src/internet/model/tcp-socket-factory.cc"
   }, 
@@ -826,11 +836,6 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-fr-hard-algorithm.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/model/lte-fr-hard-algorithm.cc.1.o", 
-    "file": "../src/lte/model/lte-fr-hard-algorithm.cc"
-  }, 
-  {
-    "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
     "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/network/utils/sll-header.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/network/utils/sll-header.cc.1.o", 
     "file": "../src/network/utils/sll-header.cc"
   }, 
@@ -843,11 +848,6 @@
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
     "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/mobility/model/constant-position-mobility-model.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/mobility/model/constant-position-mobility-model.cc.1.o", 
     "file": "../src/mobility/model/constant-position-mobility-model.cc"
-  }, 
-  {
-    "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -Isrc/aomdv -I../src/aomdv -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/aomdv/model/aomdv-id-cache.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/aomdv/model/aomdv-id-cache.cc.1.o", 
-    "file": "../src/aomdv/model/aomdv-id-cache.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -918,11 +918,6 @@
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
     "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/internet/model/ipv6-pmtu-cache.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/internet/model/ipv6-pmtu-cache.cc.1.o", 
     "file": "../src/internet/model/ipv6-pmtu-cache.cc"
-  }, 
-  {
-    "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wimax/model/bs-scheduler-simple.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wimax/model/bs-scheduler-simple.cc.1.o", 
-    "file": "../src/wimax/model/bs-scheduler-simple.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -1191,8 +1186,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/uan/model/uan-mac-rc.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/uan/model/uan-mac-rc.cc.1.o", 
-    "file": "../src/uan/model/uan-mac-rc.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/synchronizer.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/core/model/synchronizer.cc.1.o", 
+    "file": "../src/core/model/synchronizer.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -1286,8 +1281,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-rlc-am.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/model/lte-rlc-am.cc.1.o", 
-    "file": "../src/lte/model/lte-rlc-am.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -Isrc/aomdv -I../src/aomdv -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/aomdv/model/aomdv-id-cache.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/aomdv/model/aomdv-id-cache.cc.1.o", 
+    "file": "../src/aomdv/model/aomdv-id-cache.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -1301,8 +1296,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/helper/point-to-point-epc-helper.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/helper/point-to-point-epc-helper.cc.1.o", 
-    "file": "../src/lte/helper/point-to-point-epc-helper.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wimax/model/bs-scheduler-simple.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wimax/model/bs-scheduler-simple.cc.1.o", 
+    "file": "../src/wimax/model/bs-scheduler-simple.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -1336,11 +1331,6 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/network/utils/packet-socket-factory.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/network/utils/packet-socket-factory.cc.1.o", 
-    "file": "../src/network/utils/packet-socket-factory.cc"
-  }, 
-  {
-    "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
     "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wifi/model/s1g-capabilities.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wifi/model/s1g-capabilities.cc.1.o", 
     "file": "../src/wifi/model/s1g-capabilities.cc"
   }, 
@@ -1351,8 +1341,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wimax/model/snr-to-block-error-rate-record.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wimax/model/snr-to-block-error-rate-record.cc.1.o", 
-    "file": "../src/wimax/model/snr-to-block-error-rate-record.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/network/model/nix-vector.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/network/model/nix-vector.cc.1.o", 
+    "file": "../src/network/model/nix-vector.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -1551,8 +1541,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/synchronizer.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/core/model/synchronizer.cc.1.o", 
-    "file": "../src/core/model/synchronizer.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/uan/model/uan-mac-rc.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/uan/model/uan-mac-rc.cc.1.o", 
+    "file": "../src/uan/model/uan-mac-rc.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -1595,9 +1585,9 @@
     "file": "../src/wifi/model/wifi-channel.cc"
   }, 
   {
-    "directory": "/home/blue/DBTMA_ECA_H_F/IEEE-802.11ah-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_GSL=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../scratch/density_blue_200nodes.cc -c -o /home/blue/DBTMA_ECA_H_F/IEEE-802.11ah-ns-3/build/scratch/density_blue_200nodes.cc.3.o", 
-    "file": "../scratch/density_blue_200nodes.cc"
+    "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-enb-rrc.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/model/lte-enb-rrc.cc.1.o", 
+    "file": "../src/lte/model/lte-enb-rrc.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -1613,11 +1603,6 @@
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
     "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/internet/model/ipv6-packet-filter.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/internet/model/ipv6-packet-filter.cc.1.o", 
     "file": "../src/internet/model/ipv6-packet-filter.cc"
-  }, 
-  {
-    "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-enb-phy-sap.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/model/lte-enb-phy-sap.cc.1.o", 
-    "file": "../src/lte/model/lte-enb-phy-sap.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -1678,6 +1663,11 @@
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
     "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/spectrum/model/microwave-oven-spectrum-value-helper.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/spectrum/model/microwave-oven-spectrum-value-helper.cc.1.o", 
     "file": "../src/spectrum/model/microwave-oven-spectrum-value-helper.cc"
+  }, 
+  {
+    "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wifi/model/qos-utils.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wifi/model/qos-utils.cc.1.o", 
+    "file": "../src/wifi/model/qos-utils.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -1836,8 +1826,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/mesh/helper/flame/flame-installer.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/mesh/helper/flame/flame-installer.cc.1.o", 
-    "file": "../src/mesh/helper/flame/flame-installer.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wifi/model/aarf-wifi-manager.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wifi/model/aarf-wifi-manager.cc.1.o", 
+    "file": "../src/wifi/model/aarf-wifi-manager.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -2026,8 +2016,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-enb-rrc.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/model/lte-enb-rrc.cc.1.o", 
-    "file": "../src/lte/model/lte-enb-rrc.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/helper/mac-stats-calculator.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/helper/mac-stats-calculator.cc.1.o", 
+    "file": "../src/lte/helper/mac-stats-calculator.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -2148,6 +2138,11 @@
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
     "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/stats/helper/file-helper.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/stats/helper/file-helper.cc.1.o", 
     "file": "../src/stats/helper/file-helper.cc"
+  }, 
+  {
+    "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/internet/model/ipv6-option-header.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/internet/model/ipv6-option-header.cc.1.o", 
+    "file": "../src/internet/model/ipv6-option-header.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -2413,6 +2408,11 @@
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
     "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wifi/model/wifi-tx-vector.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wifi/model/wifi-tx-vector.cc.1.o", 
     "file": "../src/wifi/model/wifi-tx-vector.cc"
+  }, 
+  {
+    "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wifi/model/aarfcd-wifi-manager.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wifi/model/aarfcd-wifi-manager.cc.1.o", 
+    "file": "../src/wifi/model/aarfcd-wifi-manager.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -2791,8 +2791,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wifi/model/qos-utils.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wifi/model/qos-utils.cc.1.o", 
-    "file": "../src/wifi/model/qos-utils.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-enb-phy-sap.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/model/lte-enb-phy-sap.cc.1.o", 
+    "file": "../src/lte/model/lte-enb-phy-sap.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -2941,8 +2941,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/mesh/model/dot11s/dot11s-mac-header.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/mesh/model/dot11s/dot11s-mac-header.cc.1.o", 
-    "file": "../src/mesh/model/dot11s/dot11s-mac-header.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wifi/model/ctrl-headers.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wifi/model/ctrl-headers.cc.1.o", 
+    "file": "../src/wifi/model/ctrl-headers.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -3111,8 +3111,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wifi/model/aarf-wifi-manager.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wifi/model/aarf-wifi-manager.cc.1.o", 
-    "file": "../src/wifi/model/aarf-wifi-manager.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/mesh/helper/flame/flame-installer.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/mesh/helper/flame/flame-installer.cc.1.o", 
+    "file": "../src/mesh/helper/flame/flame-installer.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -3426,8 +3426,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/helper/mac-stats-calculator.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/helper/mac-stats-calculator.cc.1.o", 
-    "file": "../src/lte/helper/mac-stats-calculator.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/mesh/model/dot11s/dot11s-mac-header.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/mesh/model/dot11s/dot11s-mac-header.cc.1.o", 
+    "file": "../src/mesh/model/dot11s/dot11s-mac-header.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -3461,8 +3461,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../scratch/rca/SimulationEventManager.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/scratch/rca/SimulationEventManager.cc.1.o", 
-    "file": "../scratch/rca/SimulationEventManager.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/hash-murmur3.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/core/model/hash-murmur3.cc.1.o", 
+    "file": "../src/core/model/hash-murmur3.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -3491,8 +3491,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 ../src/core/model/hash-murmur3.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/core/model/hash-murmur3.cc.1.o", 
-    "file": "../src/core/model/hash-murmur3.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../scratch/rca/SimulationEventManager.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/scratch/rca/SimulationEventManager.cc.1.o", 
+    "file": "../scratch/rca/SimulationEventManager.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -3641,8 +3641,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/model/pf-ff-mac-scheduler.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/model/pf-ff-mac-scheduler.cc.1.o", 
-    "file": "../src/lte/model/pf-ff-mac-scheduler.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/mesh/model/dot11s/airtime-metric.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/mesh/model/dot11s/airtime-metric.cc.1.o", 
+    "file": "../src/mesh/model/dot11s/airtime-metric.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -4001,8 +4001,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wifi/model/aarfcd-wifi-manager.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wifi/model/aarfcd-wifi-manager.cc.1.o", 
-    "file": "../src/wifi/model/aarfcd-wifi-manager.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-rlc-am.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/model/lte-rlc-am.cc.1.o", 
+    "file": "../src/lte/model/lte-rlc-am.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -4031,8 +4031,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/internet/model/ipv6-option-header.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/internet/model/ipv6-option-header.cc.1.o", 
-    "file": "../src/internet/model/ipv6-option-header.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -pthread -I. -I.. -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libxml2 -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 -DHAVE_GTK2=1 -DHAVE_LIBXML2=1 ../src/lte/model/lte-fr-hard-algorithm.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/lte/model/lte-fr-hard-algorithm.cc.1.o", 
+    "file": "../src/lte/model/lte-fr-hard-algorithm.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
@@ -4066,8 +4066,8 @@
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
-    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/network/model/nix-vector.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/network/model/nix-vector.cc.1.o", 
-    "file": "../src/network/model/nix-vector.cc"
+    "command": "/usr/bin/g++ -std=c++11 -std=c++11 -fPIC -pthread -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_IF_TUN_H=1 -DHAVE_SQLITE3=1 ../src/wimax/model/snr-to-block-error-rate-record.cc -c -o /home/jonathan/AOMDV-routing-protocol-ns-3/build/src/wimax/model/snr-to-block-error-rate-record.cc.1.o", 
+    "file": "../src/wimax/model/snr-to-block-error-rate-record.cc"
   }, 
   {
     "directory": "/home/jonathan/AOMDV-routing-protocol-ns-3/build", 
